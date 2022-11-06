@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc>
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="Ranorex_POC"
+      id="faed174b-1ef8-441e-b626-dae858690ca0"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="Ranorex_POC"
+      id="faed174b-1ef8-441e-b626-dae858690ca0"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>
