@@ -19,8 +19,8 @@ mode="Global">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="Recording1"
-	namespace="Ranorex_POC">
+	classname="Test"
+	namespace="Ranorex_POC.Common">
 	</codegen>
 	<variables>
 	</variables>
@@ -29,7 +29,7 @@ mode="Global">
 	<repository
 	id="d3146b83-b0d2-464e-ab84-54e0bcae7b52"
 	name="Ranorex_POCRepository"
-	relativepath="Ranorex_POCRepository.rxrep">
+	relativepath="..\Ranorex_POCRepository.rxrep">
 		<codegen
 		classname="Ranorex_POCRepository"
 		namespace="Ranorex_POC">
@@ -41,7 +41,7 @@ mode="Global">
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		Recording1.UserCode.cs
+		SetupEnvironment.UserCode.cs
 	</usercodefile>
 	<references>
 	</references>

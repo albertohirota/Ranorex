@@ -1,18 +1,66 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<repository
-name="Ranorex_POCRepository"
-id="d3146b83-b0d2-464e-ab84-54e0bcae7b52">
-  <codegen
-  classname="Ranorex_POCRepository"
-  namespace="Ranorex_POC"/>
-  <rootfolder
-  name="Root"
-  id="0415c4b0-18fc-4aa6-9972-68e7f0d3bb83"
-  searchtimeout="30000ms"
-  capname="unknown"
-  isrooted="True"
-  usecache="True">
-    <basepath/>
-  </rootfolder>
-  <variables/>
+﻿<repository
+id="d3146b83-b0d2-464e-ab84-54e0bcae7b52"
+name="Ranorex_POCRepository">
+	<codegen
+	classname="Ranorex_POCRepository"
+	namespace="Ranorex_POC">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="0415c4b0-18fc-4aa6-9972-68e7f0d3bb83"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		capname="unknown"
+		id="996aeea8-e823-487b-bc09-e5587540f8f4"
+		isrooted="True"
+		name="Explorer"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			capname="menubar"
+			id="e40fe195-1edc-4d72-9a8d-a22575ade190"
+			name="TaskBar"
+			robustPath="/element/element"
+			searchtimeout="30000ms">
+				//menubar[@processname='explorer']
+			</item>
+			<basepath>
+				//
+			</basepath>
+		</appfolder>
+		<appfolder
+		capname="form"
+		id="1de98707-09f7-4cda-b595-7f3da6e79405"
+		isrooted="True"
+		name="Run"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			capname="text"
+			id="1e99ff01-de51-41b0-80ca-ac7fb62a911f"
+			name="OpenText"
+			robustPath="/form[@title='Run']/element"
+			searchtimeout="30000ms">
+				/form[@title='Run']/combobox/text[@controlid='1001']
+			</item>
+			<item
+			capname="button"
+			id="3ae2ce2d-38f0-4352-be4c-992d29b735a2"
+			name="ButtonOk"
+			robustPath="/form[@title='Run']/element"
+			searchtimeout="30000ms">
+				/form[@title='Run']/button[@text='OK']
+			</item>
+			<basepath>
+				/form[@title='Run']
+			</basepath>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
 </repository>

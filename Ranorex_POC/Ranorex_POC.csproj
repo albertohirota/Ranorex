@@ -125,6 +125,33 @@
     <Compile Include="AssemblyInfo.cs">
       <id>4934d3bd-2030-4a55-a827-9ee85dbe8d52</id>
     </Compile>
+    <Compile Include="Common\ClosingApps.cs">
+      <id>7a2e2020-4e68-47ce-a622-4b4854936ddb</id>
+    </Compile>
+    <Compile Include="Common\OpeningApps.cs">
+      <id>f944dcf6-8e5d-46a4-832c-f2649c891956</id>
+    </Compile>
+    <Compile Include="Common\PrepareEnvironment.cs">
+      <id>60fe7df7-bb51-4f41-bd75-78714d396353</id>
+    </Compile>
+    <Compile Include="Common\Test.cs">
+      <DependentUpon>Test.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>bc140d34-3aac-46fc-8871-ea6d59ee7436</id>
+      <BoundTo>f0fbc398-eb15-4944-9814-e83cb9c14039</BoundTo>
+    </Compile>
+    <Compile Include="Common\Test.UserCode.cs">
+      <DependentUpon>Test.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>066b3dbc-d658-496f-b8be-c61ae782308d</id>
+      <BoundTo>f0fbc398-eb15-4944-9814-e83cb9c14039</BoundTo>
+    </Compile>
+    <Compile Include="Outlook\OpenOutlook.cs">
+      <id>be0b2cdd-db7c-4f89-a738-460b6b703349</id>
+    </Compile>
+    <Compile Include="Outlook\SendEmails.cs">
+      <id>cbe9a2cc-afce-4f49-b625-4b8b44846a16</id>
+    </Compile>
     <Compile Include="Program.cs">
       <id>e66752eb-0df2-4e91-95a5-ef15787ad600</id>
     </Compile>
@@ -134,22 +161,15 @@
       <RepositoryCode>true</RepositoryCode>
       <id>c8e861ce-6abc-4a75-bbef-6473fbed2a3a</id>
     </Compile>
-    <Compile Include="Recording1.cs">
-      <BoundTo>f0fbc398-eb15-4944-9814-e83cb9c14039</BoundTo>
-      <DependentUpon>Recording1.rxrec</DependentUpon>
-      <RecorderCode>true</RecorderCode>
-      <id>bc140d34-3aac-46fc-8871-ea6d59ee7436</id>
-    </Compile>
-    <Compile Include="Recording1.UserCode.cs">
-      <BoundTo>f0fbc398-eb15-4944-9814-e83cb9c14039</BoundTo>
-      <DependentUpon>Recording1.rxrec</DependentUpon>
-      <UserCode>true</UserCode>
-      <id>066b3dbc-d658-496f-b8be-c61ae782308d</id>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
       <id>b42c7600-b233-49c6-aa17-ef0f5a193f40</id>
+    </None>
+    <None Include="Common\Test.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>f0fbc398-eb15-4944-9814-e83cb9c14039</id>
+      <recordtableid>86cfc241-2e4d-45c7-9a00-b6ffb9913512</recordtableid>
     </None>
     <None Include="Ranorex_POCRepository.rximg">
       <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
@@ -162,11 +182,6 @@
       <repoid>d3146b83-b0d2-464e-ab84-54e0bcae7b52</repoid>
       <reporootid>0415c4b0-18fc-4aa6-9972-68e7f0d3bb83</reporootid>
     </None>
-    <None Include="Recording1.rxrec">
-      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
-      <id>f0fbc398-eb15-4944-9814-e83cb9c14039</id>
-      <recordtableid>86cfc241-2e4d-45c7-9a00-b6ffb9913512</recordtableid>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ranorex_POC.rxtmg">
@@ -177,6 +192,26 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <id>62784a07-0892-4ca9-9f40-aa6642310fa8</id>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common">
+      <id>b13494cd-d81f-4ccc-a930-5e257bb5b9ed</id>
+    </Folder>
+    <Folder Include="TestCases">
+      <id>f5026eb1-9033-4c1a-be4f-be074c57bd0a</id>
+    </Folder>
+    <Folder Include="Outlook">
+      <id>79dc43bd-aa33-4132-bf13-83b6c09cecbe</id>
+    </Folder>
+    <Folder Include="TestCases\Word">
+      <id>77ca528f-f898-4722-8d96-202b5fdb93c9</id>
+    </Folder>
+    <Folder Include="TestCases\Outlook">
+      <id>cd4a144f-406e-4066-94aa-e520a975d559</id>
+    </Folder>
+    <Folder Include="Word">
+      <id>b0defe28-a9c7-4136-9ed8-baa3043c9f91</id>
+    </Folder>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
