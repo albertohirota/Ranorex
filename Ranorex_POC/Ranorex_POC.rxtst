@@ -10,6 +10,10 @@
 			id="1710261e-a8e1-4532-ad1f-6fcbc6b3eef0"
 			name="Setup">
 			</testcase>
+			<smartfoldernode
+			id="197dd96f-97ce-43de-9131-423348093d48"
+			name="Outlook_001">
+			</smartfoldernode>
 			<setup
 			id="1ccb39ad-becf-4529-a681-170fdef18a7d"
 			name="setup">
@@ -29,6 +33,12 @@
 			name="OpenOutlook"
 			ref="234650de-f730-4edf-bdc5-a2301e3852fb"
 			type="UserCode">
+			</testmodule>
+			<testmodule
+			id="5e64a044-8a0c-44d4-b37d-d64900defde2"
+			name="Outlook_001"
+			ref="f8fb7afb-4e98-4bfc-a793-3931c189798b"
+			type="Recording">
 			</testmodule>
 			<setup
 			id="781207ac-0160-4a33-a16c-2146cb63315f"
@@ -107,7 +117,7 @@
 			</smartfoldernode>
 			<testmodule
 			id="ee9715da-b352-45ab-88da-a1e7e2b3203b"
-			name="SendEmails"
+			name="CreateAndSendEmails"
 			ref="a94f4800-85f5-411d-8a08-ccd2d63dfdf7"
 			type="UserCode">
 			</testmodule>
@@ -157,9 +167,17 @@
 								name="setup">
 									<testmodule
 									id="ee9715da-b352-45ab-88da-a1e7e2b3203b"
-									name="SendEmails">
+									name="CreateAndSendEmails">
 									</testmodule>
 								</setup>
+								<smartfoldernode
+								id="197dd96f-97ce-43de-9131-423348093d48"
+								name="Outlook_001">
+									<testmodule
+									id="5e64a044-8a0c-44d4-b37d-d64900defde2"
+									name="Outlook_001">
+									</testmodule>
+								</smartfoldernode>
 							</smartfoldernode>
 							<teardown
 							id="e4a4ebdd-4878-4da9-99e3-4db458f5b76d"
@@ -206,6 +224,9 @@
 			</testcontainer>
 			<testcontainer
 			id="1710261e-a8e1-4532-ad1f-6fcbc6b3eef0">
+			</testcontainer>
+			<testcontainer
+			id="197dd96f-97ce-43de-9131-423348093d48">
 			</testcontainer>
 			<testcontainer
 			id="9fd92b64-9d20-4179-9e4a-1c3aaee95d9b">

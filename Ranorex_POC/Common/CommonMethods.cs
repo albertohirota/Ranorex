@@ -21,6 +21,11 @@ namespace Ranorex_POC.Common
 		{
 		}
 		
+		/// <summary>
+		/// Description: Method to wait the repository element until exist. It requires two parameters
+		/// </summary>
+		/// <param name="elementInfo">it requires the object repository element.</param>
+		/// <param name="timeOutInSeconds">How many seconds, it will wait for the element to exist.</param>
 		public static void WaitUntilExist(RepoItemInfo elementInfo, int timeOutInSeconds)
 		{
 			System.DateTime start = System.DateTime.Now;

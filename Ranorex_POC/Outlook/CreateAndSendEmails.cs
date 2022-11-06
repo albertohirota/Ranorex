@@ -24,12 +24,12 @@ namespace Ranorex_POC.Outlook
     /// Description of OutlookMethods.
     /// </summary>
     [TestModule("A94F4800-85F5-411D-8A08-CCD2D63DFDF7", ModuleType.UserCode, 1)]
-    public class SendEmails : ITestModule
+    public class CreateAndSendEmails : ITestModule
     {
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public SendEmails()
+        public CreateAndSendEmails()
         {
             // Do not delete - a parameterless constructor is required!
         }
@@ -45,6 +45,15 @@ namespace Ranorex_POC.Outlook
             Mouse.DefaultMoveTime = 300;
             Keyboard.DefaultKeyPressTime = 100;
             Delay.SpeedFactor = 1.0;
+            
+            // Email can be changed here
+            string email = Environment.UserName + "@" +Environment.UserDomainName + ".local"; 
+            
+            for(int i = 1; i < 5; i++){
+            	Outlook.OutlookMethods.CreateNewEmail();
+            	Outlook.MessageMethods.PopulateNewEmail(email,"Test Subject"+i.ToString(),"Email body information "+i.ToString());
+            	Outlook.MessageMethods.SendEmail();
+            }
         }
     }
 }

@@ -44,7 +44,7 @@ namespace Ranorex_POC.Common
             repo.Run.OpenText.PressKeys(application);
             Delay.Milliseconds(200);
 
-			Report.Log(ReportLevel.Info, "MouseClick", "Mouse click OK Button in RUN window.", repo.Run.ButtonOkInfo);
+			Report.Log(ReportLevel.Info, "Mouse", "Mouse click OK Button in RUN window.", repo.Run.ButtonOkInfo);
             repo.Run.ButtonOk.Click();
             Delay.Milliseconds(200);        
         }

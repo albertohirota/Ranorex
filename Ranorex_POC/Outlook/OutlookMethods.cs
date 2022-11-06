@@ -22,6 +22,20 @@ namespace Ranorex_POC.Outlook
 		{
 		}
 		
+		/// <summary>
+		/// Click New Email
+		/// </summary>
+		public static void CreateNewEmail()
+		{
+			Report.Log(ReportLevel.Info, "Mouse", "Mouse Click item 'Outlook.NewEmail' at Center.", repo.Outlook.NewEmailInfo);
+            repo.Outlook.NewEmail.Click();
+            Delay.Milliseconds(200);
+            Common.CommonMethods.WaitUntilExist(repo.OutlookMessage.SelfInfo, 20);
+		}
+		
+		/// <summary>
+		/// Clean Inbox and Draft folders in Outlook
+		/// </summary>
 		public static void CleanOutlookFolders()
 		{
 			Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'Outlook.MailFolders.InboxFolder' at Center.", repo.Outlook.MailFolders.InboxFolderInfo);
@@ -34,6 +48,10 @@ namespace Ranorex_POC.Outlook
             DeleteAll("Draft");
 		}
 		
+		/// <summary>
+		/// Delete all emails in a specific folder.
+		/// </summary>
+		/// <param name="folderName"></param>
 		private static void DeleteAll(string folderName)
 		{
 			Report.Info("Deleting all emails...");

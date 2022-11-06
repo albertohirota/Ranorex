@@ -153,13 +153,16 @@
     <Compile Include="Outlook\CleanUpOutlookFolders.cs">
       <id>043fe47b-1b91-4574-8014-bc6003efc9d4</id>
     </Compile>
+    <Compile Include="Outlook\MessageMethods.cs">
+      <id>7ae56586-0067-42e5-9852-75ffb6d7da06</id>
+    </Compile>
     <Compile Include="Outlook\OpenOutlook.cs">
       <id>be0b2cdd-db7c-4f89-a738-460b6b703349</id>
     </Compile>
     <Compile Include="Outlook\OutlookMethods.cs">
       <id>ebe80f12-d928-4bd4-b40b-9ae4638edaa3</id>
     </Compile>
-    <Compile Include="Outlook\SendEmails.cs">
+    <Compile Include="Outlook\CreateAndSendEmails.cs">
       <id>cbe9a2cc-afce-4f49-b625-4b8b44846a16</id>
     </Compile>
     <Compile Include="Program.cs">
@@ -170,6 +173,18 @@
       <DependentUpon>Ranorex_POCRepository.rxrep</DependentUpon>
       <RepositoryCode>true</RepositoryCode>
       <id>c8e861ce-6abc-4a75-bbef-6473fbed2a3a</id>
+    </Compile>
+    <Compile Include="TestCases\Outlook\Outlook_001.cs">
+      <BoundTo>7e914d6d-6133-44d3-b8db-0f884d86c13e</BoundTo>
+      <DependentUpon>Outlook_001.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>0181e139-26ee-471e-a843-ed47e691a137</id>
+    </Compile>
+    <Compile Include="TestCases\Outlook\Outlook_001.UserCode.cs">
+      <BoundTo>7e914d6d-6133-44d3-b8db-0f884d86c13e</BoundTo>
+      <DependentUpon>Outlook_001.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>80563407-7561-4545-b881-7a73971ce3da</id>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +206,11 @@
       <id>b78f2047-823f-4ea4-b57a-a44dac6ae05d</id>
       <repoid>d3146b83-b0d2-464e-ab84-54e0bcae7b52</repoid>
       <reporootid>0415c4b0-18fc-4aa6-9972-68e7f0d3bb83</reporootid>
+    </None>
+    <None Include="TestCases\Outlook\Outlook_001.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>7e914d6d-6133-44d3-b8db-0f884d86c13e</id>
+      <recordtableid>f8fb7afb-4e98-4bfc-a793-3931c189798b</recordtableid>
     </None>
   </ItemGroup>
   <ItemGroup>
