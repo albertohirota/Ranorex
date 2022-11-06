@@ -17,14 +17,14 @@ name="Ranorex_POCRepository">
 		id="996aeea8-e823-487b-bc09-e5587540f8f4"
 		isrooted="True"
 		name="Explorer"
-		searchtimeout="30000ms"
+		searchtimeout="5000ms"
 		usecache="False">
 			<item
 			capname="menubar"
 			id="e40fe195-1edc-4d72-9a8d-a22575ade190"
 			name="TaskBar"
 			robustPath="/element/element"
-			searchtimeout="30000ms">
+			searchtimeout="10000ms">
 				//menubar[@processname='explorer']
 			</item>
 			<basepath>
@@ -56,6 +56,111 @@ name="Ranorex_POCRepository">
 			</item>
 			<basepath>
 				/form[@title='Run']
+			</basepath>
+		</appfolder>
+		<appfolder
+		capname="form"
+		id="ecddf4b2-00ba-4aca-89f6-2ee215eca9f9"
+		isrooted="True"
+		name="Outlook"
+		searchtimeout="30000ms"
+		usecache="False">
+			<folder
+			capname="tree"
+			id="a8b73004-1c47-41c6-a3e2-2a498e69d851"
+			isrooted="True"
+			name="MailFolders"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				capname="treeitem"
+				id="b2271db4-98aa-41ab-aed1-e0aa60fc280f"
+				name="InboxFolder"
+				robustPath="/form[@processname='OUTLOOK']//tree[@name='Mail Folders']/element"
+				searchtimeout="30000ms">
+					/form[@processname='OUTLOOK']//tree[@name='Mail Folders']//treeitem[@name&gt;'Inbox']
+				</item>
+				<item
+				capname="treeitem"
+				id="78e1b64b-550c-472b-ae36-157adde53a36"
+				name="DraftFolder"
+				robustPath="/form[@processname='OUTLOOK']//tree[@name='Mail Folders']/element"
+				searchtimeout="30000ms">
+					/form[@processname='OUTLOOK']//tree[@name='Mail Folders']//treeitem[@name&gt;'Draft']
+				</item>
+				<basepath>
+					/form[@processname='OUTLOOK']//tree[@name='Mail Folders']
+				</basepath>
+			</folder>
+			<item
+			capname="menuitem"
+			id="c20ebfa9-5313-4814-89b4-0472cf786a9a"
+			name="DeleteAll"
+			robustPath="/form[@processname='OUTLOOK']/element"
+			searchtimeout="30000ms">
+				/form[@processname='OUTLOOK']//menuitem[@name='Delete All']
+			</item>
+			<item
+			capname="button"
+			id="8917619b-c58c-4447-ba9d-fbb051873262"
+			name="ButtonYes"
+			robustPath="/form[@processname='OUTLOOK']/element"
+			searchtimeout="30000ms">
+				/form[@processname='OUTLOOK']//button[@text='&amp;Yes']
+			</item>
+			<item
+			capname="button"
+			id="5e2e6946-6316-4b9d-b30a-e92fde1e5b3f"
+			name="NewEmail"
+			robustPath="/form[@processname='OUTLOOK']/element"
+			searchtimeout="30000ms">
+				/form[@processname='OUTLOOK']//button[@text='New Email']
+			</item>
+			<basepath>
+				/form[@processname='OUTLOOK']
+			</basepath>
+		</appfolder>
+		<appfolder
+		capname="form"
+		id="031a66a7-dbdb-4e60-ba7f-9982de8983d6"
+		isrooted="True"
+		name="OutlookMessage"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			capname="text"
+			id="385f88d9-6996-4046-baed-7db26784d511"
+			name="To"
+			robustPath="/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']/element"
+			searchtimeout="30000ms">
+				/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']//element[@controlid='103']/element[@automationid='258']/container[@caption='']/element/text[@accessiblename='To']
+			</item>
+			<item
+			capname="text"
+			id="b4af8be6-ca5e-4da8-a44f-d58332066992"
+			name="Subject"
+			robustPath="/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']/element"
+			searchtimeout="30000ms">
+				/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']//element[@controlid='103']//element/text[@accessiblename&gt;'Subject']
+			</item>
+			<item
+			capname="unknown"
+			id="6d16d56d-cf6c-45c0-864f-ff332cacdf17"
+			name="EmailBody"
+			robustPath="/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']/element"
+			searchtimeout="30000ms">
+				/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']/element[@controlid='103']/element[@controlid='258']/container[@caption='']/element[@controlid='4159']/element[@class='_WwB']
+			</item>
+			<item
+			capname="button"
+			id="e462922e-33e0-4971-a049-c931b808e1ad"
+			name="ButtonSend"
+			robustPath="/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']/element"
+			searchtimeout="30000ms">
+				/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']//element[@controlid='103']//button[@text='&amp;Send']
+			</item>
+			<basepath>
+				/form[@title~'Message\ \(\w.+\)\ ' or @title~'Meeting']
 			</basepath>
 		</appfolder>
 		<basepath>

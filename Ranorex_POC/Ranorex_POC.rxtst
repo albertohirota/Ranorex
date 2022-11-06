@@ -10,16 +10,40 @@
 			id="1710261e-a8e1-4532-ad1f-6fcbc6b3eef0"
 			name="Setup">
 			</testcase>
+			<smartfoldernode
+			id="197dd96f-97ce-43de-9131-423348093d48"
+			name="Outlook_001">
+			</smartfoldernode>
+			<setup
+			id="1ccb39ad-becf-4529-a681-170fdef18a7d"
+			name="setup">
+			</setup>
 			<setup
 			id="2064d970-aa85-41f4-a4d0-8a60445484e1"
 			name="setup">
 			</setup>
+			<testmodule
+			id="55ac8145-9422-4ade-820d-02fb58d6be62"
+			name="CleanUpOutlookFolders"
+			ref="a7211d91-a3e8-40dd-8fb9-f3412a79f7eb"
+			type="UserCode">
+			</testmodule>
 			<testmodule
 			id="55d9983a-df9e-47ab-81b0-1c913035a4db"
 			name="OpenOutlook"
 			ref="234650de-f730-4edf-bdc5-a2301e3852fb"
 			type="UserCode">
 			</testmodule>
+			<testmodule
+			id="5e64a044-8a0c-44d4-b37d-d64900defde2"
+			name="Outlook_001"
+			ref="f8fb7afb-4e98-4bfc-a793-3931c189798b"
+			type="Recording">
+			</testmodule>
+			<setup
+			id="781207ac-0160-4a33-a16c-2146cb63315f"
+			name="setup">
+			</setup>
 			<testsuite
 			ExportColumnList="None"
 			ReportTime="RelativeToTestSuiteStartTime"
@@ -56,6 +80,10 @@
 			reportlevel="Info;20">
 			</testcase>
 			<smartfoldernode
+			id="a5d54eaf-54ca-470b-b5ee-6a76c105e044"
+			name="OutllokTestCases">
+			</smartfoldernode>
+			<smartfoldernode
 			id="baa3c35a-b703-413a-b218-52fbaf8bfe0b"
 			name="Word">
 			</smartfoldernode>
@@ -69,6 +97,30 @@
 			id="cec388d2-9c7c-4ed6-a77e-62cb2f0d9786"
 			name="Outlook">
 			</smartfoldernode>
+			<testmodule
+			id="ceddb5a2-d543-410c-afb5-a2a3750fb4b6"
+			name="CleanUpOutlookFolders"
+			ref="a7211d91-a3e8-40dd-8fb9-f3412a79f7eb"
+			type="UserCode">
+			</testmodule>
+			<teardown
+			id="df1730ba-0ddb-44f5-bb72-8a3bfa59d95c"
+			name="teardown">
+			</teardown>
+			<teardown
+			id="e4a4ebdd-4878-4da9-99e3-4db458f5b76d"
+			name="teardown">
+			</teardown>
+			<smartfoldernode
+			id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456"
+			name="WordTestCases">
+			</smartfoldernode>
+			<testmodule
+			id="ee9715da-b352-45ab-88da-a1e7e2b3203b"
+			name="CreateAndSendEmails"
+			ref="a94f4800-85f5-411d-8a08-ccd2d63dfdf7"
+			type="UserCode">
+			</testmodule>
 			<testcase
 			id="f81b5102-1a96-4f94-96c7-f96139c86fb2"
 			name="TestCases">
@@ -102,11 +154,55 @@
 								id="55d9983a-df9e-47ab-81b0-1c913035a4db"
 								name="OpenOutlook">
 								</testmodule>
+								<testmodule
+								id="ceddb5a2-d543-410c-afb5-a2a3750fb4b6"
+								name="CleanUpOutlookFolders">
+								</testmodule>
 							</setup>
+							<smartfoldernode
+							id="a5d54eaf-54ca-470b-b5ee-6a76c105e044"
+							name="OutllokTestCases">
+								<setup
+								id="1ccb39ad-becf-4529-a681-170fdef18a7d"
+								name="setup">
+									<testmodule
+									id="ee9715da-b352-45ab-88da-a1e7e2b3203b"
+									name="CreateAndSendEmails">
+									</testmodule>
+								</setup>
+								<smartfoldernode
+								id="197dd96f-97ce-43de-9131-423348093d48"
+								name="Outlook_001">
+									<testmodule
+									id="5e64a044-8a0c-44d4-b37d-d64900defde2"
+									name="Outlook_001">
+									</testmodule>
+								</smartfoldernode>
+							</smartfoldernode>
+							<teardown
+							id="e4a4ebdd-4878-4da9-99e3-4db458f5b76d"
+							name="teardown">
+								<testmodule
+								id="55ac8145-9422-4ade-820d-02fb58d6be62"
+								name="CleanUpOutlookFolders">
+								</testmodule>
+							</teardown>
 						</smartfoldernode>
 						<smartfoldernode
 						id="baa3c35a-b703-413a-b218-52fbaf8bfe0b"
 						name="Word">
+							<setup
+							id="781207ac-0160-4a33-a16c-2146cb63315f"
+							name="setup">
+							</setup>
+							<smartfoldernode
+							id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456"
+							name="WordTestCases">
+							</smartfoldernode>
+							<teardown
+							id="df1730ba-0ddb-44f5-bb72-8a3bfa59d95c"
+							name="teardown">
+							</teardown>
 						</smartfoldernode>
 					</testcase>
 					<testcase
@@ -130,13 +226,22 @@
 			id="1710261e-a8e1-4532-ad1f-6fcbc6b3eef0">
 			</testcontainer>
 			<testcontainer
+			id="197dd96f-97ce-43de-9131-423348093d48">
+			</testcontainer>
+			<testcontainer
 			id="9fd92b64-9d20-4179-9e4a-1c3aaee95d9b">
+			</testcontainer>
+			<testcontainer
+			id="a5d54eaf-54ca-470b-b5ee-6a76c105e044">
 			</testcontainer>
 			<testcontainer
 			id="baa3c35a-b703-413a-b218-52fbaf8bfe0b">
 			</testcontainer>
 			<testcontainer
 			id="cec388d2-9c7c-4ed6-a77e-62cb2f0d9786">
+			</testcontainer>
+			<testcontainer
+			id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456">
 			</testcontainer>
 			<testcontainer
 			id="f81b5102-1a96-4f94-96c7-f96139c86fb2">

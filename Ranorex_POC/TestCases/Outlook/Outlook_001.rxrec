@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="f8fb7afb-4e98-4bfc-a793-3931c189798b"
+mode="Global">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Outlook_001"
+	namespace="Ranorex_POC.TestCases.Outlook">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+	</recorditems>
+	<repository
+	id="d3146b83-b0d2-464e-ab84-54e0bcae7b52"
+	name="Ranorex_POCRepository"
+	relativepath="..\..\Ranorex_POCRepository.rxrep">
+		<codegen
+		classname="Ranorex_POCRepository"
+		namespace="Ranorex_POC">
+		</codegen>
+		<rootfolder
+		id="0415c4b0-18fc-4aa6-9972-68e7f0d3bb83"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Outlook_001.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
