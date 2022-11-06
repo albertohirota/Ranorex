@@ -13,6 +13,7 @@
     <RANOREX_BIN_PATH Condition=" '$(RANOREX_BIN_PATH)' == '' ">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Ranorex\Studio', 'InstallDir', null, RegistryView.Registry64, RegistryView.Registry32))\Bin</RANOREX_BIN_PATH>
     <RanorexTargetsPath>$(RANOREX_BIN_PATH)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
     <projectdefaultrepository>b78f2047-823f-4ea4-b57a-a44dac6ae05d</projectdefaultrepository>
+    <StartAction>Project</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -128,6 +129,9 @@
     <Compile Include="Common\ClosingApps.cs">
       <id>7a2e2020-4e68-47ce-a622-4b4854936ddb</id>
     </Compile>
+    <Compile Include="Common\CommonMethods.cs">
+      <id>5fd0a8d9-c24f-4ca7-ae20-65715a558a54</id>
+    </Compile>
     <Compile Include="Common\OpeningApps.cs">
       <id>f944dcf6-8e5d-46a4-832c-f2649c891956</id>
     </Compile>
@@ -146,8 +150,14 @@
       <id>066b3dbc-d658-496f-b8be-c61ae782308d</id>
       <BoundTo>f0fbc398-eb15-4944-9814-e83cb9c14039</BoundTo>
     </Compile>
+    <Compile Include="Outlook\CleanUpOutlookFolders.cs">
+      <id>043fe47b-1b91-4574-8014-bc6003efc9d4</id>
+    </Compile>
     <Compile Include="Outlook\OpenOutlook.cs">
       <id>be0b2cdd-db7c-4f89-a738-460b6b703349</id>
+    </Compile>
+    <Compile Include="Outlook\OutlookMethods.cs">
+      <id>ebe80f12-d928-4bd4-b40b-9ae4638edaa3</id>
     </Compile>
     <Compile Include="Outlook\SendEmails.cs">
       <id>cbe9a2cc-afce-4f49-b625-4b8b44846a16</id>

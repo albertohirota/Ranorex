@@ -17,14 +17,14 @@ name="Ranorex_POCRepository">
 		id="996aeea8-e823-487b-bc09-e5587540f8f4"
 		isrooted="True"
 		name="Explorer"
-		searchtimeout="30000ms"
+		searchtimeout="5000ms"
 		usecache="False">
 			<item
 			capname="menubar"
 			id="e40fe195-1edc-4d72-9a8d-a22575ade190"
 			name="TaskBar"
 			robustPath="/element/element"
-			searchtimeout="30000ms">
+			searchtimeout="10000ms">
 				//menubar[@processname='explorer']
 			</item>
 			<basepath>
@@ -56,6 +56,60 @@ name="Ranorex_POCRepository">
 			</item>
 			<basepath>
 				/form[@title='Run']
+			</basepath>
+		</appfolder>
+		<appfolder
+		capname="form"
+		id="ecddf4b2-00ba-4aca-89f6-2ee215eca9f9"
+		isrooted="True"
+		name="Outlook"
+		searchtimeout="30000ms"
+		usecache="False">
+			<folder
+			capname="tree"
+			id="a8b73004-1c47-41c6-a3e2-2a498e69d851"
+			isrooted="True"
+			name="MailFolders"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				capname="treeitem"
+				id="b2271db4-98aa-41ab-aed1-e0aa60fc280f"
+				name="InboxFolder"
+				robustPath="/form[@processname='OUTLOOK']//tree[@name='Mail Folders']/element"
+				searchtimeout="30000ms">
+					/form[@processname='OUTLOOK']//tree[@name='Mail Folders']//treeitem[@name&gt;'Inbox']
+				</item>
+				<item
+				capname="treeitem"
+				id="78e1b64b-550c-472b-ae36-157adde53a36"
+				name="DraftFolder"
+				robustPath="/form[@processname='OUTLOOK']//tree[@name='Mail Folders']/element"
+				searchtimeout="30000ms">
+					/form[@processname='OUTLOOK']//tree[@name='Mail Folders']//treeitem[@name&gt;'Draft']
+				</item>
+				<basepath>
+					/form[@processname='OUTLOOK']//tree[@name='Mail Folders']
+				</basepath>
+			</folder>
+			<item
+			capname="menuitem"
+			id="c20ebfa9-5313-4814-89b4-0472cf786a9a"
+			name="DeleteAll"
+			robustPath="/form[@processname='OUTLOOK']/element"
+			searchtimeout="30000ms">
+				/form[@processname='OUTLOOK']//menuitem[@name='Delete All']
+			</item>
+			<item
+			capname="button"
+			id="8917619b-c58c-4447-ba9d-fbb051873262"
+			name="ButtonYes"
+			robustPath="/form[@processname='OUTLOOK']/element"
+			searchtimeout="30000ms">
+				/form[@processname='OUTLOOK']//button[@text='&amp;Yes']
+			</item>
+			<basepath>
+				/form[@processname='OUTLOOK']
 			</basepath>
 		</appfolder>
 		<basepath>

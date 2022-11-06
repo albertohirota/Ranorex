@@ -2,7 +2,7 @@
  * Created by Ranorex
  * User: alberto.hirota
  * Date: 11/6/2022
- * Time: 1:46 PM
+ * Time: 3:29 PM
  * 
  * To change this template use Tools > Options > Coding > Edit standard headers.
  */
@@ -21,17 +21,15 @@ using Ranorex.Core.Testing;
 namespace Ranorex_POC.Outlook
 {
     /// <summary>
-    /// Description of OpenOutlook.
+    /// Description of CleanUpOutlookFolders.
     /// </summary>
-    [TestModule("234650DE-F730-4EDF-BDC5-A2301E3852FB", ModuleType.UserCode, 1)]
-    public class OpenOutlook : ITestModule
+    [TestModule("A7211D91-A3E8-40DD-8FB9-F3412A79F7EB", ModuleType.UserCode, 1)]
+    public class CleanUpOutlookFolders : ITestModule
     {
-    	public static Ranorex_POCRepository repo = Ranorex_POCRepository.Instance;
-    	
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public OpenOutlook()
+        public CleanUpOutlookFolders()
         {
             // Do not delete - a parameterless constructor is required!
         }
@@ -47,8 +45,7 @@ namespace Ranorex_POC.Outlook
             Mouse.DefaultMoveTime = 300;
             Keyboard.DefaultKeyPressTime = 100;
             Delay.SpeedFactor = 1.0;
-            Common.OpeningApps.OpenApplication("Outlook");
-            Common.CommonMethods.WaitUntilExist(repo.Outlook.SelfInfo,60);
+            Outlook.OutlookMethods.CleanOutlookFolders();
         }
     }
 }

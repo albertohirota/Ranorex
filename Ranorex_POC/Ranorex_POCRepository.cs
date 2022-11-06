@@ -29,6 +29,7 @@ namespace Ranorex_POC
         static Ranorex_POCRepository instance = new Ranorex_POCRepository();
         Ranorex_POCRepositoryFolders.ExplorerAppFolder _explorer;
         Ranorex_POCRepositoryFolders.RunAppFolder _run;
+        Ranorex_POCRepositoryFolders.OutlookAppFolder _outlook;
 
         /// <summary>
         /// Gets the singleton class instance representing the Ranorex_POCRepository element repository.
@@ -47,6 +48,7 @@ namespace Ranorex_POC
         {
             _explorer = new Ranorex_POCRepositoryFolders.ExplorerAppFolder(this);
             _run = new Ranorex_POCRepositoryFolders.RunAppFolder(this);
+            _outlook = new Ranorex_POCRepositoryFolders.OutlookAppFolder(this);
         }
 
 #region Variables
@@ -82,6 +84,15 @@ namespace Ranorex_POC
         {
             get { return _run; }
         }
+
+        /// <summary>
+        /// The Outlook folder.
+        /// </summary>
+        [RepositoryFolder("ecddf4b2-00ba-4aca-89f6-2ee215eca9f9")]
+        public virtual Ranorex_POCRepositoryFolders.OutlookAppFolder Outlook
+        {
+            get { return _outlook; }
+        }
     }
 
     /// <summary>
@@ -102,9 +113,9 @@ namespace Ranorex_POC
             /// Creates a new Explorer  folder.
             /// </summary>
             public ExplorerAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("Explorer", "//", parentFolder, 30000, null, false, "996aeea8-e823-487b-bc09-e5587540f8f4", "")
+                    base("Explorer", "//", parentFolder, 5000, null, false, "996aeea8-e823-487b-bc09-e5587540f8f4", "")
             {
-                _taskbarInfo = new RepoItemInfo(this, "TaskBar", "menubar[@processname='explorer']", "element", 30000, null, "e40fe195-1edc-4d72-9a8d-a22575ade190");
+                _taskbarInfo = new RepoItemInfo(this, "TaskBar", "menubar[@processname='explorer']", "element", 10000, null, "e40fe195-1edc-4d72-9a8d-a22575ade190");
             }
 
             /// <summary>
@@ -244,6 +255,201 @@ namespace Ranorex_POC
                 get
                 {
                     return _buttonokInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The OutlookAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("ecddf4b2-00ba-4aca-89f6-2ee215eca9f9")]
+        public partial class OutlookAppFolder : RepoGenBaseFolder
+        {
+            Ranorex_POCRepositoryFolders.MailFoldersFolder _mailfolders;
+            RepoItemInfo _deleteallInfo;
+            RepoItemInfo _buttonyesInfo;
+
+            /// <summary>
+            /// Creates a new Outlook  folder.
+            /// </summary>
+            public OutlookAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Outlook", "/form[@processname='OUTLOOK']", parentFolder, 30000, null, false, "ecddf4b2-00ba-4aca-89f6-2ee215eca9f9", "")
+            {
+                _mailfolders = new Ranorex_POCRepositoryFolders.MailFoldersFolder(this);
+                _deleteallInfo = new RepoItemInfo(this, "DeleteAll", ".//menuitem[@name='Delete All']", "element", 30000, null, "c20ebfa9-5313-4814-89b4-0472cf786a9a");
+                _buttonyesInfo = new RepoItemInfo(this, "ButtonYes", ".//button[@text='&Yes']", "element", 30000, null, "8917619b-c58c-4447-ba9d-fbb051873262");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("ecddf4b2-00ba-4aca-89f6-2ee215eca9f9")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("ecddf4b2-00ba-4aca-89f6-2ee215eca9f9")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DeleteAll item.
+            /// </summary>
+            [RepositoryItem("c20ebfa9-5313-4814-89b4-0472cf786a9a")]
+            public virtual Ranorex.MenuItem DeleteAll
+            {
+                get
+                {
+                    return _deleteallInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DeleteAll item info.
+            /// </summary>
+            [RepositoryItemInfo("c20ebfa9-5313-4814-89b4-0472cf786a9a")]
+            public virtual RepoItemInfo DeleteAllInfo
+            {
+                get
+                {
+                    return _deleteallInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonYes item.
+            /// </summary>
+            [RepositoryItem("8917619b-c58c-4447-ba9d-fbb051873262")]
+            public virtual Ranorex.Button ButtonYes
+            {
+                get
+                {
+                    return _buttonyesInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonYes item info.
+            /// </summary>
+            [RepositoryItemInfo("8917619b-c58c-4447-ba9d-fbb051873262")]
+            public virtual RepoItemInfo ButtonYesInfo
+            {
+                get
+                {
+                    return _buttonyesInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MailFolders folder.
+            /// </summary>
+            [RepositoryFolder("a8b73004-1c47-41c6-a3e2-2a498e69d851")]
+            public virtual Ranorex_POCRepositoryFolders.MailFoldersFolder MailFolders
+            {
+                get { return _mailfolders; }
+            }
+        }
+
+        /// <summary>
+        /// The MailFoldersFolder folder.
+        /// </summary>
+        [RepositoryFolder("a8b73004-1c47-41c6-a3e2-2a498e69d851")]
+        public partial class MailFoldersFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _inboxfolderInfo;
+            RepoItemInfo _draftfolderInfo;
+
+            /// <summary>
+            /// Creates a new MailFolders  folder.
+            /// </summary>
+            public MailFoldersFolder(RepoGenBaseFolder parentFolder) :
+                    base("MailFolders", ".//tree[@name='Mail Folders']", parentFolder, 30000, null, false, "a8b73004-1c47-41c6-a3e2-2a498e69d851", "")
+            {
+                _inboxfolderInfo = new RepoItemInfo(this, "InboxFolder", ".//treeitem[@name>'Inbox']", "element", 30000, null, "b2271db4-98aa-41ab-aed1-e0aa60fc280f");
+                _draftfolderInfo = new RepoItemInfo(this, "DraftFolder", ".//treeitem[@name>'Draft']", "element", 30000, null, "78e1b64b-550c-472b-ae36-157adde53a36");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("a8b73004-1c47-41c6-a3e2-2a498e69d851")]
+            public virtual Ranorex.Tree Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Tree>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("a8b73004-1c47-41c6-a3e2-2a498e69d851")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The InboxFolder item.
+            /// </summary>
+            [RepositoryItem("b2271db4-98aa-41ab-aed1-e0aa60fc280f")]
+            public virtual Ranorex.TreeItem InboxFolder
+            {
+                get
+                {
+                    return _inboxfolderInfo.CreateAdapter<Ranorex.TreeItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The InboxFolder item info.
+            /// </summary>
+            [RepositoryItemInfo("b2271db4-98aa-41ab-aed1-e0aa60fc280f")]
+            public virtual RepoItemInfo InboxFolderInfo
+            {
+                get
+                {
+                    return _inboxfolderInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DraftFolder item.
+            /// </summary>
+            [RepositoryItem("78e1b64b-550c-472b-ae36-157adde53a36")]
+            public virtual Ranorex.TreeItem DraftFolder
+            {
+                get
+                {
+                    return _draftfolderInfo.CreateAdapter<Ranorex.TreeItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DraftFolder item info.
+            /// </summary>
+            [RepositoryItemInfo("78e1b64b-550c-472b-ae36-157adde53a36")]
+            public virtual RepoItemInfo DraftFolderInfo
+            {
+                get
+                {
+                    return _draftfolderInfo;
                 }
             }
         }

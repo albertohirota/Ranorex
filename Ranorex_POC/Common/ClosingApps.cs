@@ -116,10 +116,10 @@ namespace Ranorex_POC.Common
         private static void TaskKill(string process, Process p)
         {
         	int timeout = 60000;
+        	int seconds = timeout/1000;
         	bool hasExited = false;
-        	Report.Info("Sending task kill F command..");
-            Process.Start("taskkill", "/F /IM " + process + ".exe");
-            Report.Info("Waiting " + timeout + " milliseconds.");                  
+        	Report.Info("Sending Task Kill command. Should be killed in "+ seconds.ToString() +" seconds.");
+            Process.Start("taskkill", "/F /IM " + process + ".exe");              
             hasExited = p.WaitForExit(timeout);
             if (hasExited)
                 Report.Info("killed process  " + p.ToString());
@@ -197,8 +197,10 @@ namespace Ranorex_POC.Common
         	{
         		Report.Info("Killing explorer process.");
         		TaskkillProcess("explorer");
-        		repo.Explorer.TaskBarInfo.WaitForExists(10000);
-        		Report.Info("Explorer has restarted");  		
+        		Delay.Seconds(10);
+        		OpeningApps.StartExplorer();
+        		repo.Explorer.TaskBarInfo.WaitForExists(30000);
+        		Report.Info("Explorer should have restarted");  		
         	} catch (Exception e) {
         		Report.Warn("Explorer has not restarted.");
         		OpeningApps.StartExplorer();

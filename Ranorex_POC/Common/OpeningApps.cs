@@ -28,7 +28,7 @@ namespace Ranorex_POC.Common
         	try
         	{
 	        	Process.Start(Path.Combine(Environment.GetEnvironmentVariable("windir"), "explorer.exe"));
-				Delay.Seconds(5);	        	
+				Delay.Seconds(10);	        	
         	} catch (Exception e) {
         		Report.Error(e.Message);
         	}
@@ -36,15 +36,15 @@ namespace Ranorex_POC.Common
         
         public static void OpenApplication(string application)
         {
-        	Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LWin down}r{LWin up}'. Opening Run");
+        	Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LWin down}r{LWin up}'. Opening Run.");
             Keyboard.Press("{LWin down}r{LWin up}");
             Delay.Milliseconds(500);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence: "+ application+" with focus on 'Run.OpenText'.", repo.Run.OpenTextInfo);
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence: '"+ application+"' with focus on 'Run.OpenText'.", repo.Run.OpenTextInfo);
             repo.Run.OpenText.PressKeys(application);
             Delay.Milliseconds(200);
 
-			Report.Log(ReportLevel.Info, "MouseClick", "Mouse click OK Button'.", repo.Run.ButtonOkInfo);
+			Report.Log(ReportLevel.Info, "MouseClick", "Mouse click OK Button in RUN window.", repo.Run.ButtonOkInfo);
             repo.Run.ButtonOk.Click();
             Delay.Milliseconds(200);        
         }
