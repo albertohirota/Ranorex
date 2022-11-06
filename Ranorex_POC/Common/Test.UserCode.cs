@@ -20,9 +20,9 @@ using Ranorex.Core;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
 
-namespace Ranorex_POC
+namespace Ranorex_POC.Common
 {
-    public partial class Recording1
+    public partial class Test
     {
         /// <summary>
         /// This method gets called right after the recording has been started.

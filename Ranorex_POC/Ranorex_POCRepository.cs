@@ -27,6 +27,8 @@ namespace Ranorex_POC
     public partial class Ranorex_POCRepository : RepoGenBaseFolder
     {
         static Ranorex_POCRepository instance = new Ranorex_POCRepository();
+        Ranorex_POCRepositoryFolders.ExplorerAppFolder _explorer;
+        Ranorex_POCRepositoryFolders.RunAppFolder _run;
 
         /// <summary>
         /// Gets the singleton class instance representing the Ranorex_POCRepository element repository.
@@ -43,6 +45,8 @@ namespace Ranorex_POC
         public Ranorex_POCRepository() 
             : base("Ranorex_POCRepository", "/", null, 0, false, "0415c4b0-18fc-4aa6-9972-68e7f0d3bb83", ".\\RepositoryImages\\Ranorex_POCRepository0415c4b0.rximgres")
         {
+            _explorer = new Ranorex_POCRepositoryFolders.ExplorerAppFolder(this);
+            _run = new Ranorex_POCRepositoryFolders.RunAppFolder(this);
         }
 
 #region Variables
@@ -60,6 +64,24 @@ namespace Ranorex_POC
                 return _selfInfo;
             }
         }
+
+        /// <summary>
+        /// The Explorer folder.
+        /// </summary>
+        [RepositoryFolder("996aeea8-e823-487b-bc09-e5587540f8f4")]
+        public virtual Ranorex_POCRepositoryFolders.ExplorerAppFolder Explorer
+        {
+            get { return _explorer; }
+        }
+
+        /// <summary>
+        /// The Run folder.
+        /// </summary>
+        [RepositoryFolder("1de98707-09f7-4cda-b595-7f3da6e79405")]
+        public virtual Ranorex_POCRepositoryFolders.RunAppFolder Run
+        {
+            get { return _run; }
+        }
     }
 
     /// <summary>
@@ -68,6 +90,164 @@ namespace Ranorex_POC
     [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class Ranorex_POCRepositoryFolders
     {
+        /// <summary>
+        /// The ExplorerAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("996aeea8-e823-487b-bc09-e5587540f8f4")]
+        public partial class ExplorerAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _taskbarInfo;
+
+            /// <summary>
+            /// Creates a new Explorer  folder.
+            /// </summary>
+            public ExplorerAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Explorer", "//", parentFolder, 30000, null, false, "996aeea8-e823-487b-bc09-e5587540f8f4", "")
+            {
+                _taskbarInfo = new RepoItemInfo(this, "TaskBar", "menubar[@processname='explorer']", "element", 30000, null, "e40fe195-1edc-4d72-9a8d-a22575ade190");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("996aeea8-e823-487b-bc09-e5587540f8f4")]
+            public virtual Ranorex.Unknown Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("996aeea8-e823-487b-bc09-e5587540f8f4")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TaskBar item.
+            /// </summary>
+            [RepositoryItem("e40fe195-1edc-4d72-9a8d-a22575ade190")]
+            public virtual Ranorex.MenuBar TaskBar
+            {
+                get
+                {
+                    return _taskbarInfo.CreateAdapter<Ranorex.MenuBar>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TaskBar item info.
+            /// </summary>
+            [RepositoryItemInfo("e40fe195-1edc-4d72-9a8d-a22575ade190")]
+            public virtual RepoItemInfo TaskBarInfo
+            {
+                get
+                {
+                    return _taskbarInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The RunAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("1de98707-09f7-4cda-b595-7f3da6e79405")]
+        public partial class RunAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _opentextInfo;
+            RepoItemInfo _buttonokInfo;
+
+            /// <summary>
+            /// Creates a new Run  folder.
+            /// </summary>
+            public RunAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Run", "/form[@title='Run']", parentFolder, 30000, null, false, "1de98707-09f7-4cda-b595-7f3da6e79405", "")
+            {
+                _opentextInfo = new RepoItemInfo(this, "OpenText", "combobox/text[@controlid='1001']", "element", 30000, null, "1e99ff01-de51-41b0-80ca-ac7fb62a911f");
+                _buttonokInfo = new RepoItemInfo(this, "ButtonOk", "button[@text='OK']", "element", 30000, null, "3ae2ce2d-38f0-4352-be4c-992d29b735a2");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("1de98707-09f7-4cda-b595-7f3da6e79405")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("1de98707-09f7-4cda-b595-7f3da6e79405")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The OpenText item.
+            /// </summary>
+            [RepositoryItem("1e99ff01-de51-41b0-80ca-ac7fb62a911f")]
+            public virtual Ranorex.Text OpenText
+            {
+                get
+                {
+                    return _opentextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The OpenText item info.
+            /// </summary>
+            [RepositoryItemInfo("1e99ff01-de51-41b0-80ca-ac7fb62a911f")]
+            public virtual RepoItemInfo OpenTextInfo
+            {
+                get
+                {
+                    return _opentextInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonOk item.
+            /// </summary>
+            [RepositoryItem("3ae2ce2d-38f0-4352-be4c-992d29b735a2")]
+            public virtual Ranorex.Button ButtonOk
+            {
+                get
+                {
+                    return _buttonokInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonOk item info.
+            /// </summary>
+            [RepositoryItemInfo("3ae2ce2d-38f0-4352-be4c-992d29b735a2")]
+            public virtual RepoItemInfo ButtonOkInfo
+            {
+                get
+                {
+                    return _buttonokInfo;
+                }
+            }
+        }
+
     }
 #pragma warning restore 0436
 }
