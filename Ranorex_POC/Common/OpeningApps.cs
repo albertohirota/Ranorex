@@ -54,6 +54,9 @@ namespace Ranorex_POC.Common
             Delay.Milliseconds(200);        
         }
         
+        /// <summary>
+        /// Method to maximize Outlook if it is not maximized
+        /// </summary>
         public static void MaximizeOutlook()
         {
         	Report.Info("Checking if Outlook is maximized...");
@@ -62,6 +65,21 @@ namespace Ranorex_POC.Common
         		Report.Info("Maximizing Outlook");
         		Report.Log(ReportLevel.Info, "Click", "Mouse Click item 'Outlook.ButtonMaximize' at Center.", repo.Outlook.ButtonMaximizeInfo);
         		repo.Outlook.ButtonMaximize.Click();
+            	Delay.Milliseconds(200);
+        	}
+        }
+        
+        /// <summary>
+        /// Method to maximize Word if it is not maximized
+        /// </summary>
+        public static void MaximizeWord()
+        {
+        	Report.Info("Checking if Word is maximized...");
+        	if(repo.Word.ButtonMaximizeInfo.Exists())
+        	{
+        		Report.Info("Maximizing Outlook");
+        		Report.Log(ReportLevel.Info, "Click", "Mouse Click item 'Word.ButtonMaximize' at Center.", repo.Word.ButtonMaximizeInfo);
+        		repo.Word.ButtonMaximize.Click();
             	Delay.Milliseconds(200);
         	}
         }

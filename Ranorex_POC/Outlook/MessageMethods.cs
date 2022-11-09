@@ -118,11 +118,11 @@ namespace Ranorex_POC.Outlook
 			}
             
             Report.Info("Checking if 'You want to save your message' warns exists");
-            if(repo.OutlookWarn.SelfInfo.Exists())
+            if(repo.OfficeWarn.SelfInfo.Exists())
             {
             	Report.Info("Warn exists...");
-            	Report.Log(ReportLevel.Info, "Mouse", "Mouse Click item 'OutlookWarn.ButtonNo' at Center.", repo.OutlookWarn.ButtonNoInfo);
-            	repo.OutlookWarn.ButtonNo.Click();
+            	Report.Log(ReportLevel.Info, "Mouse", "Mouse Click item 'OutlookWarn.ButtonNo' at Center.", repo.OfficeWarn.ButtonNoInfo);
+            	repo.OfficeWarn.ButtonNo.Click();
             	Delay.Milliseconds(200);
             }
 		}

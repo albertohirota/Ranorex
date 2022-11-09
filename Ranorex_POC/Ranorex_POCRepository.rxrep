@@ -315,7 +315,7 @@ name="Ranorex_POCRepository">
 		capname="form"
 		id="d6f30d71-e034-4abd-a833-0ac2242cdbd4"
 		isrooted="True"
-		name="OutlookWarn"
+		name="OfficeWarn"
 		searchtimeout="5000ms"
 		usecache="False">
 			<item
@@ -324,10 +324,53 @@ name="Ranorex_POCRepository">
 			name="ButtonNo"
 			robustPath="/form[@title='Microsoft Outlook']/element"
 			searchtimeout="30000ms">
-				/form[@title='Microsoft Outlook']//button[@text='&amp;No']
+				/form[@title&gt;'Microsoft']//button[@text='&amp;No']
+			</item>
+			<item
+			capname="button"
+			id="a540cc55-9fe4-4bf9-88e4-da00e0d8619b"
+			name="ButtonDoNotSave"
+			robustPath="/form[@title>'Microsoft']/element"
+			searchtimeout="30000ms">
+				/form[@title&gt;'Microsoft']//button[@text='Don''t Save']
 			</item>
 			<basepath>
-				/form[@title='Microsoft Outlook']
+				/form[@title&gt;'Microsoft']
+			</basepath>
+		</appfolder>
+		<appfolder
+		capname="form"
+		id="9268ee68-afc1-4d23-b5e3-2ad953440325"
+		isrooted="True"
+		name="Word"
+		searchtimeout="1000ms"
+		usecache="False">
+			<item
+			capname="button"
+			id="2c133388-8e36-4e24-85c8-0b20aed67334"
+			name="ButtonMaximize"
+			robustPath="/form[@processname='OUTLOOK']/element"
+			searchtimeout="10000ms">
+				/form[@processname='WINWORD']//button[@name='Maximize']
+			</item>
+			<item
+			capname="listitem"
+			id="1e6843b6-ea52-4f38-91f4-751a28dfa236"
+			name="NewDocument"
+			robustPath="/form[@title='Word']/element"
+			searchtimeout="6000ms">
+				/form[@processname='WINWORD']//listitem[@name='Blank document']
+			</item>
+			<item
+			capname="button"
+			id="d3eaebd7-030a-4eb5-8a23-1a0ab142ae59"
+			name="ButtonClose"
+			robustPath="/form[@title='Word']/element"
+			searchtimeout="5000ms">
+				/form[@processname='WINWORD']//container[@name='Ribbon']/button[@name='Close']
+			</item>
+			<basepath>
+				/form[@processname='WINWORD']
 			</basepath>
 		</appfolder>
 		<basepath>

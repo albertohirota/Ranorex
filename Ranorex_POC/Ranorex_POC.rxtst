@@ -95,6 +95,12 @@
 			name="teardown">
 			</teardown>
 			<testmodule
+			id="38cf553e-47d4-4088-b7f4-c494336ca2b9"
+			name="OpenWord"
+			ref="e633668a-4e75-413e-9419-9f74702d8d21"
+			type="UserCode">
+			</testmodule>
+			<testmodule
 			id="3fe4ccae-5af0-4536-a95a-5b1b625278d9"
 			name="TeardownProcess"
 			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
@@ -458,6 +464,10 @@
 							<setup
 							id="781207ac-0160-4a33-a16c-2146cb63315f"
 							name="setup">
+								<testmodule
+								id="38cf553e-47d4-4088-b7f4-c494336ca2b9"
+								name="OpenWord">
+								</testmodule>
 							</setup>
 							<smartfoldernode
 							id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456"
@@ -484,40 +494,16 @@
 		<testconfiguration
 		name="TestRun">
 			<testcontainer
-			id="0096bc14-271c-4311-809e-90a648db4a48">
-			</testcontainer>
-			<testcontainer
 			id="0fde993f-5df8-4a43-954e-9e2e2502a2d5">
 			</testcontainer>
 			<testcontainer
 			id="1710261e-a8e1-4532-ad1f-6fcbc6b3eef0">
 			</testcontainer>
 			<testcontainer
-			id="17fd340b-a508-4f5d-a3e7-8e221082c47c">
-			</testcontainer>
-			<testcontainer
-			id="197dd96f-97ce-43de-9131-423348093d48">
-			</testcontainer>
-			<testcontainer
-			id="3ff50fd3-ec13-4f1c-8fd1-c7458d5d52f0">
-			</testcontainer>
-			<testcontainer
 			id="9fd92b64-9d20-4179-9e4a-1c3aaee95d9b">
 			</testcontainer>
 			<testcontainer
-			id="a5d54eaf-54ca-470b-b5ee-6a76c105e044">
-			</testcontainer>
-			<testcontainer
 			id="baa3c35a-b703-413a-b218-52fbaf8bfe0b">
-			</testcontainer>
-			<testcontainer
-			id="cec388d2-9c7c-4ed6-a77e-62cb2f0d9786">
-			</testcontainer>
-			<testcontainer
-			id="d1eace99-df84-4fd2-82ed-daaf308a28ed">
-			</testcontainer>
-			<testcontainer
-			id="d9038177-0d40-41e9-acc8-df7d8663ad2b">
 			</testcontainer>
 			<testcontainer
 			id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456">
