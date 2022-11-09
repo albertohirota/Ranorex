@@ -246,10 +246,20 @@
       <UserCode>true</UserCode>
       <id>adcb83c5-a5f0-447f-b0f4-1efbb2d82fe4</id>
     </Compile>
+    <Compile Include="Word\Scripts\OpenWord.cs">
+      <id>cc84d822-99ff-4804-8ff7-95a4594e865e</id>
+    </Compile>
+    <Compile Include="Word\WordMethods.cs">
+      <id>18443dff-d63c-4942-b3c5-ac957feb4ed2</id>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
       <id>b42c7600-b233-49c6-aa17-ef0f5a193f40</id>
+    </None>
+    <None Include="Files\Word.docx">
+      <id>2a2f6323-68c9-4ada-9c52-5a8f83049c84</id>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Ranorex_POCRepository.rximg">
       <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
@@ -310,6 +320,9 @@
     <Folder Include="Common\Scripts">
       <id>2c794d0b-a6f5-4402-86c7-ac78ebeb51a4</id>
     </Folder>
+    <Folder Include="Files">
+      <id>feefd596-d28c-4cfa-b8a1-7bdb74085635</id>
+    </Folder>
     <Folder Include="Outlook\Scripts">
       <id>81670397-cbe9-4a81-a370-0a2c175192e6</id>
     </Folder>
@@ -327,6 +340,9 @@
     </Folder>
     <Folder Include="Word">
       <id>b0defe28-a9c7-4136-9ed8-baa3043c9f91</id>
+    </Folder>
+    <Folder Include="Word\Scripts">
+      <id>0556d2f6-2c5e-4fc0-a00d-611f3fa5638c</id>
     </Folder>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

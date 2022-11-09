@@ -31,7 +31,8 @@ namespace Ranorex_POC
         Ranorex_POCRepositoryFolders.RunAppFolder _run;
         Ranorex_POCRepositoryFolders.OutlookAppFolder _outlook;
         Ranorex_POCRepositoryFolders.OutlookMessageAppFolder _outlookmessage;
-        Ranorex_POCRepositoryFolders.OutlookWarnAppFolder _outlookwarn;
+        Ranorex_POCRepositoryFolders.OfficeWarnAppFolder _officewarn;
+        Ranorex_POCRepositoryFolders.WordAppFolder _word;
 
         /// <summary>
         /// Gets the singleton class instance representing the Ranorex_POCRepository element repository.
@@ -52,7 +53,8 @@ namespace Ranorex_POC
             _run = new Ranorex_POCRepositoryFolders.RunAppFolder(this);
             _outlook = new Ranorex_POCRepositoryFolders.OutlookAppFolder(this);
             _outlookmessage = new Ranorex_POCRepositoryFolders.OutlookMessageAppFolder(this);
-            _outlookwarn = new Ranorex_POCRepositoryFolders.OutlookWarnAppFolder(this);
+            _officewarn = new Ranorex_POCRepositoryFolders.OfficeWarnAppFolder(this);
+            _word = new Ranorex_POCRepositoryFolders.WordAppFolder(this);
         }
 
 #region Variables
@@ -120,12 +122,21 @@ namespace Ranorex_POC
         }
 
         /// <summary>
-        /// The OutlookWarn folder.
+        /// The OfficeWarn folder.
         /// </summary>
         [RepositoryFolder("d6f30d71-e034-4abd-a833-0ac2242cdbd4")]
-        public virtual Ranorex_POCRepositoryFolders.OutlookWarnAppFolder OutlookWarn
+        public virtual Ranorex_POCRepositoryFolders.OfficeWarnAppFolder OfficeWarn
         {
-            get { return _outlookwarn; }
+            get { return _officewarn; }
+        }
+
+        /// <summary>
+        /// The Word folder.
+        /// </summary>
+        [RepositoryFolder("9268ee68-afc1-4d23-b5e3-2ad953440325")]
+        public virtual Ranorex_POCRepositoryFolders.WordAppFolder Word
+        {
+            get { return _word; }
         }
     }
 
@@ -1201,20 +1212,22 @@ namespace Ranorex_POC
         }
 
         /// <summary>
-        /// The OutlookWarnAppFolder folder.
+        /// The OfficeWarnAppFolder folder.
         /// </summary>
         [RepositoryFolder("d6f30d71-e034-4abd-a833-0ac2242cdbd4")]
-        public partial class OutlookWarnAppFolder : RepoGenBaseFolder
+        public partial class OfficeWarnAppFolder : RepoGenBaseFolder
         {
             RepoItemInfo _buttonnoInfo;
+            RepoItemInfo _buttondonotsaveInfo;
 
             /// <summary>
-            /// Creates a new OutlookWarn  folder.
+            /// Creates a new OfficeWarn  folder.
             /// </summary>
-            public OutlookWarnAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("OutlookWarn", "/form[@title='Microsoft Outlook']", parentFolder, 5000, null, false, "d6f30d71-e034-4abd-a833-0ac2242cdbd4", "")
+            public OfficeWarnAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("OfficeWarn", "/form[@title>'Microsoft']", parentFolder, 5000, null, false, "d6f30d71-e034-4abd-a833-0ac2242cdbd4", "")
             {
                 _buttonnoInfo = new RepoItemInfo(this, "ButtonNo", ".//button[@text='&No']", "element", 30000, null, "5783b38c-5453-40eb-a1d7-a413cfc33ed7");
+                _buttondonotsaveInfo = new RepoItemInfo(this, "ButtonDoNotSave", ".//button[@text='Don''t Save']", "element", 30000, null, "a540cc55-9fe4-4bf9-88e4-da00e0d8619b");
             }
 
             /// <summary>
@@ -1262,6 +1275,148 @@ namespace Ranorex_POC
                 get
                 {
                     return _buttonnoInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonDoNotSave item.
+            /// </summary>
+            [RepositoryItem("a540cc55-9fe4-4bf9-88e4-da00e0d8619b")]
+            public virtual Ranorex.Button ButtonDoNotSave
+            {
+                get
+                {
+                    return _buttondonotsaveInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonDoNotSave item info.
+            /// </summary>
+            [RepositoryItemInfo("a540cc55-9fe4-4bf9-88e4-da00e0d8619b")]
+            public virtual RepoItemInfo ButtonDoNotSaveInfo
+            {
+                get
+                {
+                    return _buttondonotsaveInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The WordAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("9268ee68-afc1-4d23-b5e3-2ad953440325")]
+        public partial class WordAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _buttonmaximizeInfo;
+            RepoItemInfo _newdocumentInfo;
+            RepoItemInfo _buttoncloseInfo;
+
+            /// <summary>
+            /// Creates a new Word  folder.
+            /// </summary>
+            public WordAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Word", "/form[@processname='WINWORD']", parentFolder, 1000, null, false, "9268ee68-afc1-4d23-b5e3-2ad953440325", "")
+            {
+                _buttonmaximizeInfo = new RepoItemInfo(this, "ButtonMaximize", ".//button[@name='Maximize']", "element", 10000, null, "2c133388-8e36-4e24-85c8-0b20aed67334");
+                _newdocumentInfo = new RepoItemInfo(this, "NewDocument", ".//listitem[@name='Blank document']", "element", 6000, null, "1e6843b6-ea52-4f38-91f4-751a28dfa236");
+                _buttoncloseInfo = new RepoItemInfo(this, "ButtonClose", ".//container[@name='Ribbon']/button[@name='Close']", "element", 5000, null, "d3eaebd7-030a-4eb5-8a23-1a0ab142ae59");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("9268ee68-afc1-4d23-b5e3-2ad953440325")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("9268ee68-afc1-4d23-b5e3-2ad953440325")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonMaximize item.
+            /// </summary>
+            [RepositoryItem("2c133388-8e36-4e24-85c8-0b20aed67334")]
+            public virtual Ranorex.Button ButtonMaximize
+            {
+                get
+                {
+                    return _buttonmaximizeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonMaximize item info.
+            /// </summary>
+            [RepositoryItemInfo("2c133388-8e36-4e24-85c8-0b20aed67334")]
+            public virtual RepoItemInfo ButtonMaximizeInfo
+            {
+                get
+                {
+                    return _buttonmaximizeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NewDocument item.
+            /// </summary>
+            [RepositoryItem("1e6843b6-ea52-4f38-91f4-751a28dfa236")]
+            public virtual Ranorex.ListItem NewDocument
+            {
+                get
+                {
+                    return _newdocumentInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NewDocument item info.
+            /// </summary>
+            [RepositoryItemInfo("1e6843b6-ea52-4f38-91f4-751a28dfa236")]
+            public virtual RepoItemInfo NewDocumentInfo
+            {
+                get
+                {
+                    return _newdocumentInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonClose item.
+            /// </summary>
+            [RepositoryItem("d3eaebd7-030a-4eb5-8a23-1a0ab142ae59")]
+            public virtual Ranorex.Button ButtonClose
+            {
+                get
+                {
+                    return _buttoncloseInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonClose item info.
+            /// </summary>
+            [RepositoryItemInfo("d3eaebd7-030a-4eb5-8a23-1a0ab142ae59")]
+            public virtual RepoItemInfo ButtonCloseInfo
+            {
+                get
+                {
+                    return _buttoncloseInfo;
                 }
             }
         }
