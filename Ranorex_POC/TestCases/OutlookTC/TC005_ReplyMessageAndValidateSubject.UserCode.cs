@@ -20,9 +20,9 @@ using Ranorex.Core;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
 
-namespace Ranorex_POC.Common
+namespace Ranorex_POC.TestCases.OutlookTC
 {
-    public partial class Test
+    public partial class TC005_ReplyMessageAndValidateSubject
     {
         /// <summary>
         /// This method gets called right after the recording has been started.
@@ -31,6 +31,41 @@ namespace Ranorex_POC.Common
         private void Init()
         {
             // Your recording specific initialization code goes here.
+        }
+
+        public void CloseMessage()
+        {
+        	Outlook.MessageMethods.ClickCloseMessageAndDoNotSave();
+        }
+
+        public void ValidateSubject()
+        {
+            Outlook.OutlookValidation.EmailSubjectExists("RE: Test Subject2");
+        }
+
+        public void SelectEmail()
+        {
+            Outlook.OutlookMethods.OpenEmailReceived("Test Subject2");
+        }
+
+        public void GoToInbox()
+        {
+        	Outlook.OutlookMethods.Click_InBoxFolder();
+        }
+
+        public void ClickReply()
+        {
+        	Outlook.MessageMethods.ClickReplyMessage();
+        }
+
+        public void ClickSend()
+        {
+        	Outlook.MessageMethods.ClickSendEmail();
+        }
+
+        public void SelectEmailAgain()
+        {
+            Outlook.OutlookMethods.ClickEmailReceived("RE: Test Subject2");
         }
 
     }
