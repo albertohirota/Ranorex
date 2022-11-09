@@ -1,8 +1,8 @@
 ﻿/*
  * Created by Ranorex
  * User: alberto.hirota
- * Date: 11/6/2022
- * Time: 1:58 PM
+ * Date: 11/9/2022
+ * Time: 7:52 AM
  * 
  * To change this template use Tools > Options > Coding > Edit standard headers.
  */
@@ -18,18 +18,18 @@ using Ranorex;
 using Ranorex.Core;
 using Ranorex.Core.Testing;
 
-namespace Ranorex_POC.Outlook
+namespace Ranorex_POC.Outlook.Scripts
 {
     /// <summary>
-    /// Description of OutlookMethods.
+    /// Description of TeardownProcess.
     /// </summary>
-    [TestModule("A94F4800-85F5-411D-8A08-CCD2D63DFDF7", ModuleType.UserCode, 1)]
-    public class CreateAndSendEmails : ITestModule
+    [TestModule("F9F74096-AEA6-4CD0-9EA5-77A9930A1233", ModuleType.UserCode, 1)]
+    public class TeardownProcess : ITestModule
     {
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public CreateAndSendEmails()
+        public TeardownProcess()
         {
             // Do not delete - a parameterless constructor is required!
         }
@@ -45,15 +45,7 @@ namespace Ranorex_POC.Outlook
             Mouse.DefaultMoveTime = 300;
             Keyboard.DefaultKeyPressTime = 100;
             Delay.SpeedFactor = 1.0;
-            
-            // Email can be changed here
-            string email = Environment.UserName + "@" +Environment.UserDomainName + ".local"; 
-            
-            for(int i = 1; i < 5; i++){
-            	Outlook.OutlookMethods.CreateNewEmail();
-            	Outlook.MessageMethods.PopulateNewEmail(email,"Test Subject"+i.ToString(),"Email body information "+i.ToString());
-            	Outlook.MessageMethods.SendEmail();
-            }
+            Outlook.MessageMethods.ClickCloseMessageAndDoNotSave();
         }
     }
 }

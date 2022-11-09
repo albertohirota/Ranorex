@@ -2,6 +2,26 @@
 <testsuitedoc>
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
+			<smartfoldernode
+			id="0096bc14-271c-4311-809e-90a648db4a48"
+			name="Validate_EmailRecipient_003">
+			</smartfoldernode>
+			<testmodule
+			id="0abb2ee3-652f-4050-b1ed-0c10a2640602"
+			name="TeardownProcess"
+			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
+			type="UserCode">
+			</testmodule>
+			<teardown
+			id="0b0fc814-8a11-4ec2-87cd-5a9d6974c220"
+			name="teardown">
+			</teardown>
+			<testmodule
+			id="0d34b400-9d2f-4dd7-aa0a-4a33ef369f12"
+			name="CreateAndSendEmails"
+			ref="a94f4800-85f5-411d-8a08-ccd2d63dfdf7"
+			type="UserCode">
+			</testmodule>
 			<testcase
 			id="0fde993f-5df8-4a43-954e-9e2e2502a2d5"
 			name="CheckLogs">
@@ -11,17 +31,83 @@
 			name="Setup">
 			</testcase>
 			<smartfoldernode
-			id="197dd96f-97ce-43de-9131-423348093d48"
-			name="Outlook_001">
+			id="17fd340b-a508-4f5d-a3e7-8e221082c47c"
+			name="OpenSendEmailAndValidate_EmailBody_004">
 			</smartfoldernode>
+			<smartfoldernode
+			id="197dd96f-97ce-43de-9131-423348093d48"
+			name="Validate_Subject_001">
+			</smartfoldernode>
+			<testmodule
+			id="1c957db4-04a7-4f4c-8b73-c26e95790002"
+			name="ReadingPaneBottom"
+			ref="f3a9aedf-361a-41db-8c55-a0e2a839a9f7"
+			type="UserCode">
+			</testmodule>
 			<setup
 			id="1ccb39ad-becf-4529-a681-170fdef18a7d"
 			name="setup">
 			</setup>
+			<testmodule
+			id="1f6a8274-78e4-45e7-87c3-1c55d051c706"
+			name="TeardownProcess"
+			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
+			type="UserCode">
+			</testmodule>
 			<setup
 			id="2064d970-aa85-41f4-a4d0-8a60445484e1"
 			name="setup">
 			</setup>
+			<testmodule
+			id="23baad47-09e9-4b98-a480-a796e0a6288f"
+			name="TC006_CancelNewMessage"
+			ref="cdd84af8-5efa-4ad8-a7c9-2155255d74a9"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="25f4f208-f2bb-4479-a2a0-eeb96cc505c2"
+			name="ReadingPaneBottom"
+			ref="f3a9aedf-361a-41db-8c55-a0e2a839a9f7"
+			type="UserCode">
+			</testmodule>
+			<teardown
+			id="2923bbb5-3c0b-4861-9f6b-feaa2629dd67"
+			name="teardown">
+			</teardown>
+			<testmodule
+			id="297580e0-60cd-4cf4-9ee3-024dcde1c504"
+			name="TC002_ValidateEmailBody"
+			ref="2ce4fb04-b2fd-49ba-803e-637141c4dcb5"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="29dace18-f319-4cba-9b5f-0f14175a8efa"
+			name="TeardownProcess"
+			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
+			type="UserCode">
+			</testmodule>
+			<teardown
+			id="2aca17cf-b070-427b-85c2-968ce869ea67"
+			name="teardown">
+			</teardown>
+			<teardown
+			id="3897e16f-dbb4-492c-a0de-d2d7d904ee77"
+			name="teardown">
+			</teardown>
+			<testmodule
+			id="3fe4ccae-5af0-4536-a95a-5b1b625278d9"
+			name="TeardownProcess"
+			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
+			type="UserCode">
+			</testmodule>
+			<smartfoldernode
+			id="3ff50fd3-ec13-4f1c-8fd1-c7458d5d52f0"
+			name="ReplyMessageAndValidate_Subject_005">
+			</smartfoldernode>
+			<teardown
+			id="45ad5701-e5f4-456a-b478-8523bb98b2ec"
+			name="teardown">
+			</teardown>
 			<testmodule
 			id="55ac8145-9422-4ade-820d-02fb58d6be62"
 			name="CleanUpOutlookFolders"
@@ -36,12 +122,40 @@
 			</testmodule>
 			<testmodule
 			id="5e64a044-8a0c-44d4-b37d-d64900defde2"
-			name="Outlook_001"
+			name="TC001_ValidateEmailReceived"
 			ref="f8fb7afb-4e98-4bfc-a793-3931c189798b"
 			type="Recording">
 			</testmodule>
+			<testmodule
+			id="69a78596-1f43-4440-8328-ea17db0bbca4"
+			name="TC005_ReplyMessageAndValidateSubject"
+			ref="923ca9c6-ee91-4e8e-9dc9-58bfd3389521"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="73028aed-0ea9-4fe3-9ab4-dc62c9340d8e"
+			name="TeardownProcess"
+			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
+			type="UserCode">
+			</testmodule>
+			<testmodule
+			id="772a54fb-29eb-440f-ac08-1327762088a8"
+			name="TeardownProcess"
+			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
+			type="UserCode">
+			</testmodule>
 			<setup
 			id="781207ac-0160-4a33-a16c-2146cb63315f"
+			name="setup">
+			</setup>
+			<testmodule
+			id="78adf34d-56fb-41e8-a964-7d8bb0949032"
+			name="TC004_OpenSendEmailAndValidateEmailBody"
+			ref="6f8f6169-5e8b-49cd-8f9e-67281f3b9966"
+			type="Recording">
+			</testmodule>
+			<setup
+			id="821b0b09-522f-47b9-bd40-a8d537ed6fda"
 			name="setup">
 			</setup>
 			<testsuite
@@ -83,6 +197,12 @@
 			id="a5d54eaf-54ca-470b-b5ee-6a76c105e044"
 			name="OutllokTestCases">
 			</smartfoldernode>
+			<testmodule
+			id="a8c1e2f8-4f2a-4937-9143-201c70e12315"
+			name="ReadingPaneOff"
+			ref="047f6197-7dbb-4d6c-876c-d1e3edcaf2d5"
+			type="UserCode">
+			</testmodule>
 			<smartfoldernode
 			id="baa3c35a-b703-413a-b218-52fbaf8bfe0b"
 			name="Word">
@@ -91,6 +211,16 @@
 			id="bcb9302b-91ce-4472-b59c-8baaa3614bb2"
 			name="PrepareEnvironment"
 			ref="4bae78d4-833f-453d-939d-9ef122a97efd"
+			type="UserCode">
+			</testmodule>
+			<teardown
+			id="c0bfc499-3fa3-4ed0-947e-192314e6694a"
+			name="teardown">
+			</teardown>
+			<testmodule
+			id="c8c1e73b-af3b-4f0b-8d90-13dfe1689c34"
+			name="TeardownProcess"
+			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
 			type="UserCode">
 			</testmodule>
 			<smartfoldernode
@@ -103,6 +233,18 @@
 			ref="a7211d91-a3e8-40dd-8fb9-f3412a79f7eb"
 			type="UserCode">
 			</testmodule>
+			<smartfoldernode
+			id="d1eace99-df84-4fd2-82ed-daaf308a28ed"
+			name="Validate_EmailBody_002">
+			</smartfoldernode>
+			<teardown
+			id="d3c38b1a-da22-4965-b7af-a6e69cfa449d"
+			name="teardown">
+			</teardown>
+			<smartfoldernode
+			id="d9038177-0d40-41e9-acc8-df7d8663ad2b"
+			name="CancelNewMessage_006">
+			</smartfoldernode>
 			<teardown
 			id="df1730ba-0ddb-44f5-bb72-8a3bfa59d95c"
 			name="teardown">
@@ -111,20 +253,26 @@
 			id="e4a4ebdd-4878-4da9-99e3-4db458f5b76d"
 			name="teardown">
 			</teardown>
+			<testmodule
+			id="e947b520-5915-4f25-acf1-aecca4202423"
+			name="ReadingPaneOff"
+			ref="047f6197-7dbb-4d6c-876c-d1e3edcaf2d5"
+			type="UserCode">
+			</testmodule>
 			<smartfoldernode
 			id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456"
 			name="WordTestCases">
 			</smartfoldernode>
-			<testmodule
-			id="ee9715da-b352-45ab-88da-a1e7e2b3203b"
-			name="CreateAndSendEmails"
-			ref="a94f4800-85f5-411d-8a08-ccd2d63dfdf7"
-			type="UserCode">
-			</testmodule>
 			<testcase
 			id="f81b5102-1a96-4f94-96c7-f96139c86fb2"
 			name="TestCases">
 			</testcase>
+			<testmodule
+			id="fd50c4dd-9332-4b93-92dc-52133b03fa6e"
+			name="TC003_ValidateEmailRecipient"
+			ref="dd996ada-3556-4ad5-895b-69f883c2c563"
+			type="Recording">
+			</testmodule>
 		</flatlistofchildren>
 		<childhierarchy>
 			<testsuite
@@ -166,18 +314,134 @@
 								id="1ccb39ad-becf-4529-a681-170fdef18a7d"
 								name="setup">
 									<testmodule
-									id="ee9715da-b352-45ab-88da-a1e7e2b3203b"
+									id="0d34b400-9d2f-4dd7-aa0a-4a33ef369f12"
 									name="CreateAndSendEmails">
+									</testmodule>
+									<testmodule
+									id="1c957db4-04a7-4f4c-8b73-c26e95790002"
+									name="ReadingPaneBottom">
 									</testmodule>
 								</setup>
 								<smartfoldernode
 								id="197dd96f-97ce-43de-9131-423348093d48"
-								name="Outlook_001">
+								name="Validate_Subject_001">
 									<testmodule
 									id="5e64a044-8a0c-44d4-b37d-d64900defde2"
-									name="Outlook_001">
+									name="TC001_ValidateEmailReceived">
 									</testmodule>
+									<teardown
+									id="d3c38b1a-da22-4965-b7af-a6e69cfa449d"
+									name="teardown">
+										<testmodule
+										id="c8c1e73b-af3b-4f0b-8d90-13dfe1689c34"
+										name="TeardownProcess">
+										</testmodule>
+									</teardown>
 								</smartfoldernode>
+								<smartfoldernode
+								id="d1eace99-df84-4fd2-82ed-daaf308a28ed"
+								name="Validate_EmailBody_002">
+									<testmodule
+									id="297580e0-60cd-4cf4-9ee3-024dcde1c504"
+									name="TC002_ValidateEmailBody">
+									</testmodule>
+									<teardown
+									id="0b0fc814-8a11-4ec2-87cd-5a9d6974c220"
+									name="teardown">
+										<testmodule
+										id="772a54fb-29eb-440f-ac08-1327762088a8"
+										name="TeardownProcess">
+										</testmodule>
+									</teardown>
+								</smartfoldernode>
+								<smartfoldernode
+								id="0096bc14-271c-4311-809e-90a648db4a48"
+								name="Validate_EmailRecipient_003">
+									<testmodule
+									id="fd50c4dd-9332-4b93-92dc-52133b03fa6e"
+									name="TC003_ValidateEmailRecipient">
+									</testmodule>
+									<teardown
+									id="45ad5701-e5f4-456a-b478-8523bb98b2ec"
+									name="teardown">
+										<testmodule
+										id="a8c1e2f8-4f2a-4937-9143-201c70e12315"
+										name="ReadingPaneOff">
+										</testmodule>
+										<testmodule
+										id="73028aed-0ea9-4fe3-9ab4-dc62c9340d8e"
+										name="TeardownProcess">
+										</testmodule>
+									</teardown>
+								</smartfoldernode>
+								<smartfoldernode
+								id="17fd340b-a508-4f5d-a3e7-8e221082c47c"
+								name="OpenSendEmailAndValidate_EmailBody_004">
+									<testmodule
+									id="78adf34d-56fb-41e8-a964-7d8bb0949032"
+									name="TC004_OpenSendEmailAndValidateEmailBody">
+									</testmodule>
+									<teardown
+									id="2aca17cf-b070-427b-85c2-968ce869ea67"
+									name="teardown">
+										<testmodule
+										id="29dace18-f319-4cba-9b5f-0f14175a8efa"
+										name="TeardownProcess">
+										</testmodule>
+									</teardown>
+								</smartfoldernode>
+								<smartfoldernode
+								id="3ff50fd3-ec13-4f1c-8fd1-c7458d5d52f0"
+								name="ReplyMessageAndValidate_Subject_005">
+									<setup
+									id="821b0b09-522f-47b9-bd40-a8d537ed6fda"
+									name="setup">
+										<testmodule
+										id="25f4f208-f2bb-4479-a2a0-eeb96cc505c2"
+										name="ReadingPaneBottom">
+										</testmodule>
+									</setup>
+									<testmodule
+									id="69a78596-1f43-4440-8328-ea17db0bbca4"
+									name="TC005_ReplyMessageAndValidateSubject">
+									</testmodule>
+									<teardown
+									id="3897e16f-dbb4-492c-a0de-d2d7d904ee77"
+									name="teardown">
+										<testmodule
+										id="e947b520-5915-4f25-acf1-aecca4202423"
+										name="ReadingPaneOff">
+										</testmodule>
+										<testmodule
+										id="1f6a8274-78e4-45e7-87c3-1c55d051c706"
+										name="TeardownProcess">
+										</testmodule>
+									</teardown>
+								</smartfoldernode>
+								<smartfoldernode
+								id="d9038177-0d40-41e9-acc8-df7d8663ad2b"
+								name="CancelNewMessage_006">
+									<testmodule
+									id="23baad47-09e9-4b98-a480-a796e0a6288f"
+									name="TC006_CancelNewMessage">
+									</testmodule>
+									<teardown
+									id="2923bbb5-3c0b-4861-9f6b-feaa2629dd67"
+									name="teardown">
+										<testmodule
+										id="0abb2ee3-652f-4050-b1ed-0c10a2640602"
+										name="TeardownProcess">
+										</testmodule>
+									</teardown>
+								</smartfoldernode>
+								<teardown
+								id="c0bfc499-3fa3-4ed0-947e-192314e6694a"
+								name="teardown">
+									<testmodule
+									id="3fe4ccae-5af0-4536-a95a-5b1b625278d9"
+									name="TeardownProcess">
+									</testmodule>
+								</teardown>
 							</smartfoldernode>
 							<teardown
 							id="e4a4ebdd-4878-4da9-99e3-4db458f5b76d"
@@ -220,13 +484,22 @@
 		<testconfiguration
 		name="TestRun">
 			<testcontainer
+			id="0096bc14-271c-4311-809e-90a648db4a48">
+			</testcontainer>
+			<testcontainer
 			id="0fde993f-5df8-4a43-954e-9e2e2502a2d5">
 			</testcontainer>
 			<testcontainer
 			id="1710261e-a8e1-4532-ad1f-6fcbc6b3eef0">
 			</testcontainer>
 			<testcontainer
+			id="17fd340b-a508-4f5d-a3e7-8e221082c47c">
+			</testcontainer>
+			<testcontainer
 			id="197dd96f-97ce-43de-9131-423348093d48">
+			</testcontainer>
+			<testcontainer
+			id="3ff50fd3-ec13-4f1c-8fd1-c7458d5d52f0">
 			</testcontainer>
 			<testcontainer
 			id="9fd92b64-9d20-4179-9e4a-1c3aaee95d9b">
@@ -239,6 +512,12 @@
 			</testcontainer>
 			<testcontainer
 			id="cec388d2-9c7c-4ed6-a77e-62cb2f0d9786">
+			</testcontainer>
+			<testcontainer
+			id="d1eace99-df84-4fd2-82ed-daaf308a28ed">
+			</testcontainer>
+			<testcontainer
+			id="d9038177-0d40-41e9-acc8-df7d8663ad2b">
 			</testcontainer>
 			<testcontainer
 			id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456">

@@ -34,6 +34,11 @@ namespace Ranorex_POC.Common
         	}
         }
         
+        
+        /// <summary>
+        /// Description: Open an application
+        /// </summary>
+        /// <param name="application">Need the Application name</param>
         public static void OpenApplication(string application)
         {
         	Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LWin down}r{LWin up}'. Opening Run.");
@@ -47,6 +52,18 @@ namespace Ranorex_POC.Common
 			Report.Log(ReportLevel.Info, "Mouse", "Mouse click OK Button in RUN window.", repo.Run.ButtonOkInfo);
             repo.Run.ButtonOk.Click();
             Delay.Milliseconds(200);        
+        }
+        
+        public static void MaximizeOutlook()
+        {
+        	Report.Info("Checking if Outlook is maximized...");
+        	if(repo.Outlook.ButtonMaximizeInfo.Exists())
+        	{
+        		Report.Info("Maximizing Outlook");
+        		Report.Log(ReportLevel.Info, "Click", "Mouse Click item 'Outlook.ButtonMaximize' at Center.", repo.Outlook.ButtonMaximizeInfo);
+        		repo.Outlook.ButtonMaximize.Click();
+            	Delay.Milliseconds(200);
+        	}
         }
 	}
 }

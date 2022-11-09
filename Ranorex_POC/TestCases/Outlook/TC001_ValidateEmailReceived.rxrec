@@ -19,12 +19,42 @@ mode="Global">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="Outlook_001"
+	classname="_ValidateEmailReceived"
 	namespace="Ranorex_POC.TestCases.Outlook">
 	</codegen>
 	<variables>
 	</variables>
 	<recorditems>
+		<userrecorditem
+		classname="_ValidateEmailReceived"
+		enabled="True"
+		isexternaltestmethod="False"
+		methodname="GoToInbox"
+		namespace="Ranorex_POC.TestCases.Outlook"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<arguments
+			id="d8cbe37a-b4d2-433d-b4e9-539ac252d3bb">
+			</arguments>
+		</userrecorditem>
+		<userrecorditem
+		classname="_ValidateEmailReceived"
+		enabled="True"
+		isexternaltestmethod="False"
+		methodname="ValidateEmailReceived"
+		namespace="Ranorex_POC.TestCases.Outlook"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<arguments
+			id="26eb4ee8-1031-4661-b864-3e7d5f454695">
+			</arguments>
+		</userrecorditem>
 	</recorditems>
 	<repository
 	id="d3146b83-b0d2-464e-ab84-54e0bcae7b52"
@@ -41,7 +71,7 @@ mode="Global">
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		Outlook_001.UserCode.cs
+		_ValidateEmailReceived.UserCode.cs
 	</usercodefile>
 	<references>
 	</references>

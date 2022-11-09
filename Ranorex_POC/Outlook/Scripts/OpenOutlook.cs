@@ -49,6 +49,7 @@ namespace Ranorex_POC.Outlook
             Delay.SpeedFactor = 1.0;
             Common.OpeningApps.OpenApplication("Outlook");
             Common.CommonMethods.WaitUntilExist(repo.Outlook.SelfInfo,60);
+            Common.OpeningApps.MaximizeOutlook();
         }
     }
 }

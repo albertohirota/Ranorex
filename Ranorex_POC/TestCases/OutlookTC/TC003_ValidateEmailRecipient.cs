@@ -20,33 +20,33 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using Ranorex.Core.Repository;
 
-namespace Ranorex_POC.TestCases.Outlook
+namespace Ranorex_POC.TestCases.OutlookTC
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Outlook_001 recording.
+    ///The TC003_ValidateEmailRecipient recording.
     /// </summary>
-    [TestModule("f8fb7afb-4e98-4bfc-a793-3931c189798b", ModuleType.Recording, 1)]
-    public partial class Outlook_001 : ITestModule
+    [TestModule("dd996ada-3556-4ad5-895b-69f883c2c563", ModuleType.Recording, 1)]
+    public partial class TC003_ValidateEmailRecipient : ITestModule
     {
         /// <summary>
         /// Holds an instance of the global::Ranorex_POC.Ranorex_POCRepository repository.
         /// </summary>
         public static global::Ranorex_POC.Ranorex_POCRepository repo = global::Ranorex_POC.Ranorex_POCRepository.Instance;
 
-        static Outlook_001 instance = new Outlook_001();
+        static TC003_ValidateEmailRecipient instance = new TC003_ValidateEmailRecipient();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Outlook_001()
+        public TC003_ValidateEmailRecipient()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Outlook_001 Instance
+        public static TC003_ValidateEmailRecipient Instance
         {
             get { return instance; }
         }
@@ -79,6 +79,18 @@ namespace Ranorex_POC.TestCases.Outlook
 
             Init();
 
+            SendEmail();
+            Delay.Milliseconds(0);
+            
+            GoToInbox();
+            Delay.Milliseconds(0);
+            
+            SelectEmail();
+            Delay.Milliseconds(0);
+            
+            ValidateEmailRecipient();
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

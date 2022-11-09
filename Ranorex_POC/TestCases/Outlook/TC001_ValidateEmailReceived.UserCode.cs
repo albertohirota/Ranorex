@@ -22,7 +22,7 @@ using Ranorex.Core.Testing;
 
 namespace Ranorex_POC.TestCases.Outlook
 {
-    public partial class Outlook_001
+    public partial class TC001_ValidateEmailReceived
     {
         /// <summary>
         /// This method gets called right after the recording has been started.
@@ -31,6 +31,18 @@ namespace Ranorex_POC.TestCases.Outlook
         private void Init()
         {
             // Your recording specific initialization code goes here.
+        }
+
+        public void GoToInbox()
+        {
+            // TODO: Replace the following line with your code implementation.
+            throw new NotImplementedException();
+        }
+
+        public void ValidateEmailReceived()
+        {
+            // TODO: Replace the following line with your code implementation.
+            throw new NotImplementedException();
         }
 
     }

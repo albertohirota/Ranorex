@@ -135,35 +135,35 @@
     <Compile Include="Common\OpeningApps.cs">
       <id>f944dcf6-8e5d-46a4-832c-f2649c891956</id>
     </Compile>
-    <Compile Include="Common\PrepareEnvironment.cs">
+    <Compile Include="Common\Scripts\PrepareEnvironment.cs">
       <id>60fe7df7-bb51-4f41-bd75-78714d396353</id>
-    </Compile>
-    <Compile Include="Common\Test.cs">
-      <DependentUpon>Test.rxrec</DependentUpon>
-      <RecorderCode>true</RecorderCode>
-      <id>bc140d34-3aac-46fc-8871-ea6d59ee7436</id>
-      <BoundTo>f0fbc398-eb15-4944-9814-e83cb9c14039</BoundTo>
-    </Compile>
-    <Compile Include="Common\Test.UserCode.cs">
-      <DependentUpon>Test.rxrec</DependentUpon>
-      <UserCode>true</UserCode>
-      <id>066b3dbc-d658-496f-b8be-c61ae782308d</id>
-      <BoundTo>f0fbc398-eb15-4944-9814-e83cb9c14039</BoundTo>
-    </Compile>
-    <Compile Include="Outlook\CleanUpOutlookFolders.cs">
-      <id>043fe47b-1b91-4574-8014-bc6003efc9d4</id>
     </Compile>
     <Compile Include="Outlook\MessageMethods.cs">
       <id>7ae56586-0067-42e5-9852-75ffb6d7da06</id>
     </Compile>
-    <Compile Include="Outlook\OpenOutlook.cs">
-      <id>be0b2cdd-db7c-4f89-a738-460b6b703349</id>
-    </Compile>
     <Compile Include="Outlook\OutlookMethods.cs">
       <id>ebe80f12-d928-4bd4-b40b-9ae4638edaa3</id>
     </Compile>
-    <Compile Include="Outlook\CreateAndSendEmails.cs">
+    <Compile Include="Outlook\OutlookValidation.cs">
+      <id>6db897f5-8232-4b6a-822f-d8aa6f417c5d</id>
+    </Compile>
+    <Compile Include="Outlook\Scripts\CleanUpOutlookFolders.cs">
+      <id>043fe47b-1b91-4574-8014-bc6003efc9d4</id>
+    </Compile>
+    <Compile Include="Outlook\Scripts\CreateAndSendEmails.cs">
       <id>cbe9a2cc-afce-4f49-b625-4b8b44846a16</id>
+    </Compile>
+    <Compile Include="Outlook\Scripts\OpenOutlook.cs">
+      <id>be0b2cdd-db7c-4f89-a738-460b6b703349</id>
+    </Compile>
+    <Compile Include="Outlook\Scripts\ReadingPaneBottom.cs">
+      <id>5c388c16-fbcd-43fb-b6d6-13cdab4ef1a7</id>
+    </Compile>
+    <Compile Include="Outlook\Scripts\ReadingPaneOff.cs">
+      <id>3ee65e04-fcfc-479c-9c34-1d7dbcf560de</id>
+    </Compile>
+    <Compile Include="Outlook\Scripts\TeardownProcess.cs">
+      <id>53b300ec-1f64-4ea8-847a-544b6b4ea507</id>
     </Compile>
     <Compile Include="Program.cs">
       <id>e66752eb-0df2-4e91-95a5-ef15787ad600</id>
@@ -174,27 +174,82 @@
       <RepositoryCode>true</RepositoryCode>
       <id>c8e861ce-6abc-4a75-bbef-6473fbed2a3a</id>
     </Compile>
-    <Compile Include="TestCases\Outlook\Outlook_001.cs">
+    <Compile Include="TestCases\OutlookTC\TC001_ValidateEmailReceived.cs">
       <BoundTo>7e914d6d-6133-44d3-b8db-0f884d86c13e</BoundTo>
-      <DependentUpon>Outlook_001.rxrec</DependentUpon>
+      <DependentUpon>TC001_ValidateEmailReceived.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
       <id>0181e139-26ee-471e-a843-ed47e691a137</id>
     </Compile>
-    <Compile Include="TestCases\Outlook\Outlook_001.UserCode.cs">
+    <Compile Include="TestCases\OutlookTC\TC001_ValidateEmailReceived.UserCode.cs">
       <BoundTo>7e914d6d-6133-44d3-b8db-0f884d86c13e</BoundTo>
-      <DependentUpon>Outlook_001.rxrec</DependentUpon>
+      <DependentUpon>TC001_ValidateEmailReceived.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>80563407-7561-4545-b881-7a73971ce3da</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC002_ValidateEmailBody.cs">
+      <BoundTo>89a34815-a97d-4bfa-9ee7-a4c0a3e5b206</BoundTo>
+      <DependentUpon>TC002_ValidateEmailBody.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>3c95cc7c-5546-4641-8631-c6fb099af3a0</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC002_ValidateEmailBody.UserCode.cs">
+      <BoundTo>89a34815-a97d-4bfa-9ee7-a4c0a3e5b206</BoundTo>
+      <DependentUpon>TC002_ValidateEmailBody.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1da9d37c-c5f1-4abd-babf-78be0f9ce097</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC003_ValidateEmailRecipient.cs">
+      <BoundTo>0fb4b835-e0e0-44a4-9749-c74a7f00dcf1</BoundTo>
+      <DependentUpon>TC003_ValidateEmailRecipient.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>346a4cd4-08b4-44ff-a502-62e373a33621</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC003_ValidateEmailRecipient.UserCode.cs">
+      <BoundTo>0fb4b835-e0e0-44a4-9749-c74a7f00dcf1</BoundTo>
+      <DependentUpon>TC003_ValidateEmailRecipient.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a6b657b5-bef0-4958-a65a-c486603e6856</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC004_OpenSendEmailAndValidateEmailBody.cs">
+      <BoundTo>377a9fda-e8b7-4b09-811f-27289e51a8d5</BoundTo>
+      <DependentUpon>TC004_OpenSendEmailAndValidateEmailBody.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>1f4980b8-ae0c-426e-8e6e-e425bed543d3</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC004_OpenSendEmailAndValidateEmailBody.UserCode.cs">
+      <BoundTo>377a9fda-e8b7-4b09-811f-27289e51a8d5</BoundTo>
+      <DependentUpon>TC004_OpenSendEmailAndValidateEmailBody.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>f52b6e31-3091-4c9b-aa0b-8f3687120a3f</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC005_ReplyMessageAndValidateSubject.cs">
+      <BoundTo>895cb04b-1a89-475a-a0c7-8423b79056dd</BoundTo>
+      <DependentUpon>TC005_ReplyMessageAndValidateSubject.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>4429e9eb-c5ee-424d-8791-59929f6ab6a2</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC005_ReplyMessageAndValidateSubject.UserCode.cs">
+      <BoundTo>895cb04b-1a89-475a-a0c7-8423b79056dd</BoundTo>
+      <DependentUpon>TC005_ReplyMessageAndValidateSubject.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>31dda8db-7c34-4cd5-a427-5a3c6b2f9bea</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC006_CancelNewMessage.cs">
+      <BoundTo>47c2861b-a39b-40d8-aef5-11d1c490e98c</BoundTo>
+      <DependentUpon>TC006_CancelNewMessage.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>41f12357-1581-415d-9b62-004ab077642f</id>
+    </Compile>
+    <Compile Include="TestCases\OutlookTC\TC006_CancelNewMessage.UserCode.cs">
+      <BoundTo>47c2861b-a39b-40d8-aef5-11d1c490e98c</BoundTo>
+      <DependentUpon>TC006_CancelNewMessage.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>adcb83c5-a5f0-447f-b0f4-1efbb2d82fe4</id>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
       <id>b42c7600-b233-49c6-aa17-ef0f5a193f40</id>
-    </None>
-    <None Include="Common\Test.rxrec">
-      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
-      <id>f0fbc398-eb15-4944-9814-e83cb9c14039</id>
-      <recordtableid>86cfc241-2e4d-45c7-9a00-b6ffb9913512</recordtableid>
     </None>
     <None Include="Ranorex_POCRepository.rximg">
       <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
@@ -207,10 +262,35 @@
       <repoid>d3146b83-b0d2-464e-ab84-54e0bcae7b52</repoid>
       <reporootid>0415c4b0-18fc-4aa6-9972-68e7f0d3bb83</reporootid>
     </None>
-    <None Include="TestCases\Outlook\Outlook_001.rxrec">
+    <None Include="TestCases\OutlookTC\TC001_ValidateEmailReceived.rxrec">
       <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
       <id>7e914d6d-6133-44d3-b8db-0f884d86c13e</id>
       <recordtableid>f8fb7afb-4e98-4bfc-a793-3931c189798b</recordtableid>
+    </None>
+    <None Include="TestCases\OutlookTC\TC002_ValidateEmailBody.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>89a34815-a97d-4bfa-9ee7-a4c0a3e5b206</id>
+      <recordtableid>2ce4fb04-b2fd-49ba-803e-637141c4dcb5</recordtableid>
+    </None>
+    <None Include="TestCases\OutlookTC\TC003_ValidateEmailRecipient.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>0fb4b835-e0e0-44a4-9749-c74a7f00dcf1</id>
+      <recordtableid>dd996ada-3556-4ad5-895b-69f883c2c563</recordtableid>
+    </None>
+    <None Include="TestCases\OutlookTC\TC004_OpenSendEmailAndValidateEmailBody.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>377a9fda-e8b7-4b09-811f-27289e51a8d5</id>
+      <recordtableid>6f8f6169-5e8b-49cd-8f9e-67281f3b9966</recordtableid>
+    </None>
+    <None Include="TestCases\OutlookTC\TC005_ReplyMessageAndValidateSubject.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>895cb04b-1a89-475a-a0c7-8423b79056dd</id>
+      <recordtableid>923ca9c6-ee91-4e8e-9dc9-58bfd3389521</recordtableid>
+    </None>
+    <None Include="TestCases\OutlookTC\TC006_CancelNewMessage.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>47c2861b-a39b-40d8-aef5-11d1c490e98c</id>
+      <recordtableid>cdd84af8-5efa-4ad8-a7c9-2155255d74a9</recordtableid>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -227,16 +307,22 @@
     <Folder Include="Common">
       <id>b13494cd-d81f-4ccc-a930-5e257bb5b9ed</id>
     </Folder>
+    <Folder Include="Common\Scripts">
+      <id>2c794d0b-a6f5-4402-86c7-ac78ebeb51a4</id>
+    </Folder>
+    <Folder Include="Outlook\Scripts">
+      <id>81670397-cbe9-4a81-a370-0a2c175192e6</id>
+    </Folder>
     <Folder Include="TestCases">
       <id>f5026eb1-9033-4c1a-be4f-be074c57bd0a</id>
     </Folder>
     <Folder Include="Outlook">
       <id>79dc43bd-aa33-4132-bf13-83b6c09cecbe</id>
     </Folder>
-    <Folder Include="TestCases\Word">
+    <Folder Include="TestCases\WordTC">
       <id>77ca528f-f898-4722-8d96-202b5fdb93c9</id>
     </Folder>
-    <Folder Include="TestCases\Outlook">
+    <Folder Include="TestCases\OutlookTC">
       <id>cd4a144f-406e-4066-94aa-e520a975d559</id>
     </Folder>
     <Folder Include="Word">
