@@ -139,6 +139,12 @@
 			type="Recording">
 			</testmodule>
 			<testmodule
+			id="71bdd673-b8d5-4986-bb42-89df5396e979"
+			name="ClenupFiles"
+			ref="d1b116fb-f6b5-4f3a-b83c-9ebdc5aeca70"
+			type="UserCode">
+			</testmodule>
+			<testmodule
 			id="73028aed-0ea9-4fe3-9ab4-dc62c9340d8e"
 			name="TeardownProcess"
 			ref="f9f74096-aea6-4cd0-9ea5-77a9930a1233"
@@ -160,6 +166,10 @@
 			ref="6f8f6169-5e8b-49cd-8f9e-67281f3b9966"
 			type="Recording">
 			</testmodule>
+			<smartfoldernode
+			id="7f9b41a7-a2a3-4e41-bd71-b13ef7a78fed"
+			name="SaveAsNewDoc">
+			</smartfoldernode>
 			<setup
 			id="821b0b09-522f-47b9-bd40-a8d537ed6fda"
 			name="setup">
@@ -194,6 +204,12 @@
 			reportwriteinterval="30000ms"
 			singlereportpdfdirectory="SingleReportPDF">
 			</testsuite>
+			<testmodule
+			id="999005f5-8587-414e-a422-203a4e8cdcc1"
+			name="TC100_SaveAsNewDoc"
+			ref="3ceefa23-2e06-40fb-8760-e588edeb79a7"
+			type="Recording">
+			</testmodule>
 			<testcase
 			id="9fd92b64-9d20-4179-9e4a-1c3aaee95d9b"
 			name="Ranorex_POC"
@@ -472,10 +488,22 @@
 							<smartfoldernode
 							id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456"
 							name="WordTestCases">
+								<smartfoldernode
+								id="7f9b41a7-a2a3-4e41-bd71-b13ef7a78fed"
+								name="SaveAsNewDoc">
+									<testmodule
+									id="999005f5-8587-414e-a422-203a4e8cdcc1"
+									name="TC100_SaveAsNewDoc">
+									</testmodule>
+								</smartfoldernode>
 							</smartfoldernode>
 							<teardown
 							id="df1730ba-0ddb-44f5-bb72-8a3bfa59d95c"
 							name="teardown">
+								<testmodule
+								id="71bdd673-b8d5-4986-bb42-89df5396e979"
+								name="ClenupFiles">
+								</testmodule>
 							</teardown>
 						</smartfoldernode>
 					</testcase>
@@ -494,16 +522,43 @@
 		<testconfiguration
 		name="TestRun">
 			<testcontainer
+			id="0096bc14-271c-4311-809e-90a648db4a48">
+			</testcontainer>
+			<testcontainer
 			id="0fde993f-5df8-4a43-954e-9e2e2502a2d5">
 			</testcontainer>
 			<testcontainer
 			id="1710261e-a8e1-4532-ad1f-6fcbc6b3eef0">
 			</testcontainer>
 			<testcontainer
+			id="17fd340b-a508-4f5d-a3e7-8e221082c47c">
+			</testcontainer>
+			<testcontainer
+			id="197dd96f-97ce-43de-9131-423348093d48">
+			</testcontainer>
+			<testcontainer
+			id="3ff50fd3-ec13-4f1c-8fd1-c7458d5d52f0">
+			</testcontainer>
+			<testcontainer
+			id="7f9b41a7-a2a3-4e41-bd71-b13ef7a78fed">
+			</testcontainer>
+			<testcontainer
 			id="9fd92b64-9d20-4179-9e4a-1c3aaee95d9b">
 			</testcontainer>
 			<testcontainer
+			id="a5d54eaf-54ca-470b-b5ee-6a76c105e044">
+			</testcontainer>
+			<testcontainer
 			id="baa3c35a-b703-413a-b218-52fbaf8bfe0b">
+			</testcontainer>
+			<testcontainer
+			id="cec388d2-9c7c-4ed6-a77e-62cb2f0d9786">
+			</testcontainer>
+			<testcontainer
+			id="d1eace99-df84-4fd2-82ed-daaf308a28ed">
+			</testcontainer>
+			<testcontainer
+			id="d9038177-0d40-41e9-acc8-df7d8663ad2b">
 			</testcontainer>
 			<testcontainer
 			id="e9fdfcf1-8fea-42cc-86b2-3dcf8d108456">

@@ -7,6 +7,7 @@
  * To change this template use Tools > Options > Coding > Edit standard headers.
  */
 using System;
+using System.IO;
 using Ranorex;
 using Ranorex.Core.Repository;
 
@@ -53,6 +54,37 @@ namespace Ranorex_POC.Common
         	else
         		Report.Failure (elementInfo.Name + " failed to open within the specified timeout.Total time of waiting is " +duration.TotalSeconds + " seconds.");
         	Report.Screenshot();
+		}
+		
+		/// <summary>
+		/// Create folder, if the folder doesn't exist
+		/// </summary>
+		/// <param name="folderName">Folder path</param>
+		public static void CreateFolderIfDoesNotExist(string folderName)
+		{
+			bool exists = System.IO.Directory.Exists(folderName);
+			if(!exists)
+    			System.IO.Directory.CreateDirectory(folderName);
+		}
+		
+		/// <summary>
+		/// Description: delete all files inside a specific folder
+		/// </summary>
+		/// <param name="folderName">Folder path</param>
+		public static void DeleteAllFilesInsideFolder(string folderName)
+		{
+			try
+			{
+				System.IO.DirectoryInfo directory = new DirectoryInfo(folderName);
+				foreach (FileInfo file in directory.GetFiles())
+				{
+				    file.Delete(); 
+				}
+			}
+			catch(Exception ex){
+				Report.Screenshot();
+				Report.Error(ex.Message);
+			}	
 		}
 	}
 }
