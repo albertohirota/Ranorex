@@ -1,8 +1,8 @@
 ﻿/*
  * Created by Ranorex
  * User: alberto.hirota
- * Date: 11/6/2022
- * Time: 10:41 AM
+ * Date: 11/9/2022
+ * Time: 2:22 PM
  * 
  * To change this template use Tools > Options > Coding > Edit standard headers.
  */
@@ -18,18 +18,18 @@ using Ranorex;
 using Ranorex.Core;
 using Ranorex.Core.Testing;
 
-namespace Ranorex_POC.Common
+namespace Ranorex_POC.Word.Scripts
 {
     /// <summary>
-    /// Description of PrepareEnvironment.
+    /// Description of ClenupFiles.
     /// </summary>
-    [TestModule("4BAE78D4-833F-453D-939D-9EF122A97EFD", ModuleType.UserCode, 1)]
-    public class PrepareEnvironment : ITestModule
+    [TestModule("D1B116FB-F6B5-4F3A-B83C-9EBDC5AECA70", ModuleType.UserCode, 1)]
+    public class ClenupFiles : ITestModule
     {
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public PrepareEnvironment()
+        public ClenupFiles()
         {
             // Do not delete - a parameterless constructor is required!
         }
@@ -45,8 +45,7 @@ namespace Ranorex_POC.Common
             Mouse.DefaultMoveTime = 300;
             Keyboard.DefaultKeyPressTime = 100;
             Delay.SpeedFactor = 1.0;
-            Common.ClosingApps.CloseAllApplications();
-            Common.CommonMethods.CreateFolderIfDoesNotExist("C:\\Temp");
+            Common.CommonMethods.DeleteAllFilesInsideFolder(@"C:\Temp");
         }
     }
 }

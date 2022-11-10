@@ -316,14 +316,14 @@ name="Ranorex_POCRepository">
 		id="d6f30d71-e034-4abd-a833-0ac2242cdbd4"
 		isrooted="True"
 		name="OfficeWarn"
-		searchtimeout="5000ms"
+		searchtimeout="1000ms"
 		usecache="False">
 			<item
 			capname="button"
 			id="5783b38c-5453-40eb-a1d7-a413cfc33ed7"
 			name="ButtonNo"
 			robustPath="/form[@title='Microsoft Outlook']/element"
-			searchtimeout="30000ms">
+			searchtimeout="10000ms">
 				/form[@title&gt;'Microsoft']//button[@text='&amp;No']
 			</item>
 			<item
@@ -331,7 +331,7 @@ name="Ranorex_POCRepository">
 			id="a540cc55-9fe4-4bf9-88e4-da00e0d8619b"
 			name="ButtonDoNotSave"
 			robustPath="/form[@title>'Microsoft']/element"
-			searchtimeout="30000ms">
+			searchtimeout="5000ms">
 				/form[@title&gt;'Microsoft']//button[@text='Don''t Save']
 			</item>
 			<basepath>
@@ -369,6 +369,125 @@ name="Ranorex_POCRepository">
 			searchtimeout="5000ms">
 				/form[@processname='WINWORD']//container[@name='Ribbon']/button[@name='Close']
 			</item>
+			<folder
+			capname="unknown"
+			id="91628d7c-80c3-40ce-b9c2-5d995a2cfff4"
+			isrooted="True"
+			name="MenuButtonBar"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				capname="tabpage"
+				id="680ecc40-568a-478b-8799-e56acd28e931"
+				name="ButtonHome"
+				robustPath="/form[@processname='WINWORD']//tabpagelist[@name='Ribbon Tabs']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']//*[@caption='Ribbon']//tabpage[@automationid='TabHome']
+				</item>
+				<item
+				capname="button"
+				id="d86bd515-dc03-400c-8546-77786e4f3eb4"
+				name="ButtonFile"
+				robustPath="/form[@processname='WINWORD']//*[@caption='Ribbon']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']//*[@caption='Ribbon']//button[@automationid='FileTabButton']
+				</item>
+				<basepath>
+					/form[@processname='WINWORD']//*[@caption='Ribbon']
+				</basepath>
+			</folder>
+			<item
+			capname="text"
+			id="284f7463-99ee-40af-8fd7-95cccecfb2bb"
+			name="DocumentBody"
+			robustPath="/form[@processname='WINWORD']/element"
+			searchtimeout="30000ms">
+				/form[@processname='WINWORD']//text[@automationid='Body']
+			</item>
+			<folder
+			capname="unknown"
+			id="04d1bd21-33f1-40c9-b500-26f7b18088ce"
+			isrooted="True"
+			name="InfoMenuBar"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				capname="unknown"
+				id="5081dc63-8ad7-4ba6-9362-32292f506395"
+				name="MenuSaveAs"
+				robustPath="/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']//*[@name='Save As']
+				</item>
+				<basepath>
+					/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']
+				</basepath>
+			</folder>
+			<folder
+			capname="form"
+			id="386195f4-2ada-4342-bcc3-05b71ae0b5cf"
+			isrooted="True"
+			name="Information"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				capname="button"
+				id="7ad70015-253b-4ae1-948e-132bf8f11b35"
+				name="BrowseMenuButton"
+				robustPath="/form[@processname='WINWORD']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']//button[@name='Browse']
+				</item>
+				<basepath>
+					/form[@processname='WINWORD']
+				</basepath>
+			</folder>
+			<folder
+			capname="form"
+			id="467390ce-5b43-4c77-b3d2-e636129a01b8"
+			isrooted="True"
+			name="SaveAsWindow"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				capname="text"
+				id="0e4e777c-a0a1-4eb0-b424-ccf24eabc117"
+				name="FileNameTextBox"
+				robustPath="/form[@processname='WINWORD']//form[@title='Save As']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']//form[@title='Save As']//text[@controlid='1001']
+				</item>
+				<item
+				capname="button"
+				id="5acc2d36-2a4d-4841-8a01-7749be16629d"
+				name="SaveButton"
+				robustPath="/form[@processname='WINWORD']//form[@title='Save As']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']//form[@title='Save As']//button[@text='&amp;Save']
+				</item>
+				<basepath>
+					/form[@processname='WINWORD']//form[@title='Save As']
+				</basepath>
+			</folder>
+			<folder
+			capname="unknown"
+			id="2557e28d-7f77-460d-aff3-a8f1ceec8068"
+			isrooted="True"
+			name="ReplaceWindow"
+			searchtimeout="1000ms"
+			usecache="False">
+				<item
+				capname="button"
+				id="d25e0503-e957-4c6e-85e9-c409570ac1dc"
+				name="OkButton"
+				robustPath="/form[@processname='WINWORD']//text[@caption~'already exists.']/element"
+				searchtimeout="3000ms">
+					/form[@processname='WINWORD']///button[@text='OK']
+				</item>
+				<basepath>
+					/form[@processname='WINWORD']//
+				</basepath>
+			</folder>
 			<basepath>
 				/form[@processname='WINWORD']
 			</basepath>
