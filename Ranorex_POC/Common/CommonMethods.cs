@@ -86,5 +86,18 @@ namespace Ranorex_POC.Common
 				Report.Error(ex.Message);
 			}	
 		}
+		
+		/// <summary>
+		/// Return string path of the testing files.
+		/// </summary>
+		/// <param name="localPath"></param>
+		/// <returns>Test file name. Ex: \\Files\\Word.docx</returns>
+		public static string ReturnStringPath(string localPath)
+		{
+		    string currentDir = Environment.CurrentDirectory;
+		    DirectoryInfo directory = new DirectoryInfo(
+		        Path.GetFullPath(Path.Combine(currentDir, @"..\..\" + localPath)));
+		    return directory.ToString();
+		}
 	}
 }

@@ -22,7 +22,7 @@ using Ranorex.Core.Testing;
 
 namespace Ranorex_POC.TestCases.WordTC
 {
-    public partial class TC100_SaveAsNewDoc
+    public partial class TC101_ValidateIconInTheRibbon
     {
         /// <summary>
         /// This method gets called right after the recording has been started.
@@ -35,29 +35,27 @@ namespace Ranorex_POC.TestCases.WordTC
 
         public void OpenNewDoc()
         {
-        	Report.Info("Doc should be open now. Checking...");
-        	if(!Word.WordMethods.IsWordOpen())
-        		Word.WordMethods.OpenWord();
+        	Word.WordMethods.OpenWord();
         }
 
-        public void AddBodyInformation()
+        public void GoToInsertRibbon()
         {
-        	Word.WordMethods.AddDocBodyText("Adding information, Test Case 100");
+        	Word.WordMethods.Click_InsertMenuButton();
         }
 
-        public void SaveAs()
+        public void GoToHomeRibbon()
         {
-        	Word.WordMethods.SaveAsDocument("C:\\temp\\TC100.docx");
+            Word.WordMethods.Click_HomeMenuButton();
         }
 
-        public void ValidateFileExists()
+        public void CloseDoc()
         {
-        	Word.WordValidation.ValidateFileExists(@"C:\temp\TC100.docx");
+            Word.WordMethods.Click_CloseDocumentAndDoNotSave();
         }
 
-        public void CloseDocument()
+        public void Validate_InsertPictureIcon()
         {
-        	Word.WordMethods.Click_CloseDocumentAndDoNotSave();
+        	Word.WordValidation.ValidateInsertPictureIconExists();
         }
 
     }

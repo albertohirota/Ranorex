@@ -1314,9 +1314,9 @@ namespace Ranorex_POC
             Ranorex_POCRepositoryFolders.InformationFolder _information;
             Ranorex_POCRepositoryFolders.SaveAsWindowFolder _saveaswindow;
             Ranorex_POCRepositoryFolders.ReplaceWindowFolder _replacewindow;
+            Ranorex_POCRepositoryFolders.RibbonFolder1 _ribbon;
             RepoItemInfo _buttonmaximizeInfo;
             RepoItemInfo _newdocumentInfo;
-            RepoItemInfo _buttoncloseInfo;
             RepoItemInfo _documentbodyInfo;
 
             /// <summary>
@@ -1330,9 +1330,9 @@ namespace Ranorex_POC
                 _information = new Ranorex_POCRepositoryFolders.InformationFolder(this);
                 _saveaswindow = new Ranorex_POCRepositoryFolders.SaveAsWindowFolder(this);
                 _replacewindow = new Ranorex_POCRepositoryFolders.ReplaceWindowFolder(this);
+                _ribbon = new Ranorex_POCRepositoryFolders.RibbonFolder1(this);
                 _buttonmaximizeInfo = new RepoItemInfo(this, "ButtonMaximize", ".//button[@name='Maximize']", "element", 10000, null, "2c133388-8e36-4e24-85c8-0b20aed67334");
                 _newdocumentInfo = new RepoItemInfo(this, "NewDocument", ".//listitem[@name='Blank document']", "element", 6000, null, "1e6843b6-ea52-4f38-91f4-751a28dfa236");
-                _buttoncloseInfo = new RepoItemInfo(this, "ButtonClose", ".//container[@name='Ribbon']/button[@name='Close']", "element", 5000, null, "d3eaebd7-030a-4eb5-8a23-1a0ab142ae59");
                 _documentbodyInfo = new RepoItemInfo(this, "DocumentBody", ".//text[@automationid='Body']", "element", 30000, null, "284f7463-99ee-40af-8fd7-95cccecfb2bb");
             }
 
@@ -1409,30 +1409,6 @@ namespace Ranorex_POC
             }
 
             /// <summary>
-            /// The ButtonClose item.
-            /// </summary>
-            [RepositoryItem("d3eaebd7-030a-4eb5-8a23-1a0ab142ae59")]
-            public virtual Ranorex.Button ButtonClose
-            {
-                get
-                {
-                    return _buttoncloseInfo.CreateAdapter<Ranorex.Button>(true);
-                }
-            }
-
-            /// <summary>
-            /// The ButtonClose item info.
-            /// </summary>
-            [RepositoryItemInfo("d3eaebd7-030a-4eb5-8a23-1a0ab142ae59")]
-            public virtual RepoItemInfo ButtonCloseInfo
-            {
-                get
-                {
-                    return _buttoncloseInfo;
-                }
-            }
-
-            /// <summary>
             /// The DocumentBody item.
             /// </summary>
             [RepositoryItem("284f7463-99ee-40af-8fd7-95cccecfb2bb")]
@@ -1500,6 +1476,15 @@ namespace Ranorex_POC
             {
                 get { return _replacewindow; }
             }
+
+            /// <summary>
+            /// The Ribbon folder.
+            /// </summary>
+            [RepositoryFolder("28ccb2b3-1f5c-45eb-9984-2cf2af020970")]
+            public virtual Ranorex_POCRepositoryFolders.RibbonFolder1 Ribbon
+            {
+                get { return _ribbon; }
+            }
         }
 
         /// <summary>
@@ -1510,6 +1495,7 @@ namespace Ranorex_POC
         {
             RepoItemInfo _buttonhomeInfo;
             RepoItemInfo _buttonfileInfo;
+            RepoItemInfo _buttoninsertInfo;
 
             /// <summary>
             /// Creates a new MenuButtonBar  folder.
@@ -1519,6 +1505,7 @@ namespace Ranorex_POC
             {
                 _buttonhomeInfo = new RepoItemInfo(this, "ButtonHome", ".//tabpage[@automationid='TabHome']", "element", 30000, null, "680ecc40-568a-478b-8799-e56acd28e931");
                 _buttonfileInfo = new RepoItemInfo(this, "ButtonFile", ".//button[@automationid='FileTabButton']", "element", 30000, null, "d86bd515-dc03-400c-8546-77786e4f3eb4");
+                _buttoninsertInfo = new RepoItemInfo(this, "ButtonInsert", ".//tabpage[@automationid='TabInsert']", "element", 30000, null, "a7c40aa8-52c9-4c7e-a0a7-db74629c7b75");
             }
 
             /// <summary>
@@ -1592,6 +1579,30 @@ namespace Ranorex_POC
                     return _buttonfileInfo;
                 }
             }
+
+            /// <summary>
+            /// The ButtonInsert item.
+            /// </summary>
+            [RepositoryItem("a7c40aa8-52c9-4c7e-a0a7-db74629c7b75")]
+            public virtual Ranorex.TabPage ButtonInsert
+            {
+                get
+                {
+                    return _buttoninsertInfo.CreateAdapter<Ranorex.TabPage>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonInsert item info.
+            /// </summary>
+            [RepositoryItemInfo("a7c40aa8-52c9-4c7e-a0a7-db74629c7b75")]
+            public virtual RepoItemInfo ButtonInsertInfo
+            {
+                get
+                {
+                    return _buttoninsertInfo;
+                }
+            }
         }
 
         /// <summary>
@@ -1601,6 +1612,9 @@ namespace Ranorex_POC
         public partial class InfoMenuBarFolder : RepoGenBaseFolder
         {
             RepoItemInfo _menusaveasInfo;
+            RepoItemInfo _menuinfoInfo;
+            RepoItemInfo _menuhomeInfo;
+            RepoItemInfo _menubackInfo;
 
             /// <summary>
             /// Creates a new InfoMenuBar  folder.
@@ -1609,6 +1623,9 @@ namespace Ranorex_POC
                     base("InfoMenuBar", ".///*[@automationid='NavBarMenu' or @name='File']", parentFolder, 30000, null, false, "04d1bd21-33f1-40c9-b500-26f7b18088ce", "")
             {
                 _menusaveasInfo = new RepoItemInfo(this, "MenuSaveAs", ".//*[@name='Save As']", "element", 30000, null, "5081dc63-8ad7-4ba6-9362-32292f506395");
+                _menuinfoInfo = new RepoItemInfo(this, "MenuInfo", ".//*[@name='Info']", "element", 30000, null, "e3c3518d-10e2-41f3-aa10-95a953ac4e1c");
+                _menuhomeInfo = new RepoItemInfo(this, "MenuHome", ".//*[@name='Home']", "element", 30000, null, "b351f8bb-0790-497a-9019-557f922c5689");
+                _menubackInfo = new RepoItemInfo(this, "MenuBack", ".//*[@name='Back']", "element", 30000, null, "7d2b3161-729d-410f-ab9a-024e485482a1");
             }
 
             /// <summary>
@@ -1658,6 +1675,78 @@ namespace Ranorex_POC
                     return _menusaveasInfo;
                 }
             }
+
+            /// <summary>
+            /// The MenuInfo item.
+            /// </summary>
+            [RepositoryItem("e3c3518d-10e2-41f3-aa10-95a953ac4e1c")]
+            public virtual Ranorex.Unknown MenuInfo
+            {
+                get
+                {
+                    return _menuinfoInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MenuInfo item info.
+            /// </summary>
+            [RepositoryItemInfo("e3c3518d-10e2-41f3-aa10-95a953ac4e1c")]
+            public virtual RepoItemInfo MenuInfoInfo
+            {
+                get
+                {
+                    return _menuinfoInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MenuHome item.
+            /// </summary>
+            [RepositoryItem("b351f8bb-0790-497a-9019-557f922c5689")]
+            public virtual Ranorex.Unknown MenuHome
+            {
+                get
+                {
+                    return _menuhomeInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MenuHome item info.
+            /// </summary>
+            [RepositoryItemInfo("b351f8bb-0790-497a-9019-557f922c5689")]
+            public virtual RepoItemInfo MenuHomeInfo
+            {
+                get
+                {
+                    return _menuhomeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MenuBack item.
+            /// </summary>
+            [RepositoryItem("7d2b3161-729d-410f-ab9a-024e485482a1")]
+            public virtual Ranorex.Unknown MenuBack
+            {
+                get
+                {
+                    return _menubackInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MenuBack item info.
+            /// </summary>
+            [RepositoryItemInfo("7d2b3161-729d-410f-ab9a-024e485482a1")]
+            public virtual RepoItemInfo MenuBackInfo
+            {
+                get
+                {
+                    return _menubackInfo;
+                }
+            }
         }
 
         /// <summary>
@@ -1667,6 +1756,7 @@ namespace Ranorex_POC
         public partial class InformationFolder : RepoGenBaseFolder
         {
             RepoItemInfo _browsemenubuttonInfo;
+            RepoItemInfo _tagInfo;
 
             /// <summary>
             /// Creates a new Information  folder.
@@ -1675,6 +1765,7 @@ namespace Ranorex_POC
                     base("Information", "", parentFolder, 30000, null, false, "386195f4-2ada-4342-bcc3-05b71ae0b5cf", "")
             {
                 _browsemenubuttonInfo = new RepoItemInfo(this, "BrowseMenuButton", ".//button[@name='Browse']", "element", 30000, null, "7ad70015-253b-4ae1-948e-132bf8f11b35");
+                _tagInfo = new RepoItemInfo(this, "Tag", ".//container[@name='Properties']/text[@name='Tags' and @iskeyboardfocusable='True']", "element", 30000, null, "3bf26406-be27-48c5-9a40-5ceec67be536");
             }
 
             /// <summary>
@@ -1722,6 +1813,30 @@ namespace Ranorex_POC
                 get
                 {
                     return _browsemenubuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Tag item.
+            /// </summary>
+            [RepositoryItem("3bf26406-be27-48c5-9a40-5ceec67be536")]
+            public virtual Ranorex.Text Tag
+            {
+                get
+                {
+                    return _tagInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Tag item info.
+            /// </summary>
+            [RepositoryItemInfo("3bf26406-be27-48c5-9a40-5ceec67be536")]
+            public virtual RepoItemInfo TagInfo
+            {
+                get
+                {
+                    return _tagInfo;
                 }
             }
         }
@@ -1880,6 +1995,133 @@ namespace Ranorex_POC
                 get
                 {
                     return _okbuttonInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The RibbonFolder1 folder.
+        /// </summary>
+        [RepositoryFolder("28ccb2b3-1f5c-45eb-9984-2cf2af020970")]
+        public partial class RibbonFolder1 : RepoGenBaseFolder
+        {
+            InsertPictureIconInfoClass _insertpictureiconInfo;
+            RepoItemInfo _buttoncloseInfo;
+
+            /// <summary>
+            /// Creates a new Ribbon  folder.
+            /// </summary>
+            public RibbonFolder1(RepoGenBaseFolder parentFolder) :
+                    base("Ribbon", ".//container[@name='Ribbon']", parentFolder, 10000, null, false, "28ccb2b3-1f5c-45eb-9984-2cf2af020970", "")
+            {
+                _insertpictureiconInfo = new InsertPictureIconInfoClass(this);
+                _buttoncloseInfo = new RepoItemInfo(this, "ButtonClose", "button[@name='Close']", "", 5000, null, "d3eaebd7-030a-4eb5-8a23-1a0ab142ae59");
+            }
+
+            /// <summary>
+            /// The InsertPictureIconInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("a468d318-340e-453a-b013-21dfc6704a79")]
+            public class InsertPictureIconInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// InsertPictureIconInfoClass class constructor.
+                /// </summary>
+                public InsertPictureIconInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "InsertPictureIcon", ".//menuitem[@automationid='FlyoutAnchorInsertPictures']", 30000, null, "a468d318-340e-453a-b013-21dfc6704a79")
+                { }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <returns>The Screenshot1 image.</returns>
+                [RepositoryImage("9b15705e-5106-4281-8fff-f5cb50e9d6b7")]
+                public CompressedImage GetScreenshot1()
+                {
+                    return GetImage("9b15705e-5106-4281-8fff-f5cb50e9d6b7");
+                }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("9b15705e-5106-4281-8fff-f5cb50e9d6b7")]
+                public CompressedImage GetScreenshot1(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("9b15705e-5106-4281-8fff-f5cb50e9d6b7", cropRect);
+                }
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("28ccb2b3-1f5c-45eb-9984-2cf2af020970")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("28ccb2b3-1f5c-45eb-9984-2cf2af020970")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The InsertPictureIcon item.
+            /// </summary>
+            [RepositoryItem("a468d318-340e-453a-b013-21dfc6704a79")]
+            public virtual Ranorex.MenuItem InsertPictureIcon
+            {
+                get
+                {
+                    return _insertpictureiconInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The InsertPictureIcon item info.
+            /// </summary>
+            [RepositoryItemInfo("a468d318-340e-453a-b013-21dfc6704a79")]
+            public virtual InsertPictureIconInfoClass InsertPictureIconInfo
+            {
+                get
+                {
+                    return _insertpictureiconInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonClose item.
+            /// </summary>
+            [RepositoryItem("d3eaebd7-030a-4eb5-8a23-1a0ab142ae59")]
+            public virtual Ranorex.Button ButtonClose
+            {
+                get
+                {
+                    return _buttoncloseInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonClose item info.
+            /// </summary>
+            [RepositoryItemInfo("d3eaebd7-030a-4eb5-8a23-1a0ab142ae59")]
+            public virtual RepoItemInfo ButtonCloseInfo
+            {
+                get
+                {
+                    return _buttoncloseInfo;
                 }
             }
         }

@@ -258,6 +258,42 @@
       <UserCode>true</UserCode>
       <id>1d98ddcc-cc6f-4df8-b376-82a187cf128d</id>
     </Compile>
+    <Compile Include="TestCases\WordTC\TC101_ValidateIconInTheRibbon.cs">
+      <BoundTo>87456cca-fda3-47f8-a214-0b0bd75914d8</BoundTo>
+      <DependentUpon>TC101_ValidateIconInTheRibbon.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>1c7d8c37-ee7f-4a18-a164-5657238babad</id>
+    </Compile>
+    <Compile Include="TestCases\WordTC\TC101_ValidateIconInTheRibbon.UserCode.cs">
+      <BoundTo>87456cca-fda3-47f8-a214-0b0bd75914d8</BoundTo>
+      <DependentUpon>TC101_ValidateIconInTheRibbon.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a9d053f1-7b93-43e4-a396-3175ed9a3ba6</id>
+    </Compile>
+    <Compile Include="TestCases\WordTC\TC102_ValidateDocumentContent.cs">
+      <BoundTo>37f052fc-c22e-4859-8ec9-97294c1a25a7</BoundTo>
+      <DependentUpon>TC102_ValidateDocumentContent.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>0299cb06-9f11-4a31-833f-ce545e059759</id>
+    </Compile>
+    <Compile Include="TestCases\WordTC\TC102_ValidateDocumentContent.UserCode.cs">
+      <BoundTo>37f052fc-c22e-4859-8ec9-97294c1a25a7</BoundTo>
+      <DependentUpon>TC102_ValidateDocumentContent.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>2e87dddf-ca4a-4b49-83e1-56a59a4ed4bb</id>
+    </Compile>
+    <Compile Include="TestCases\WordTC\TC103_ValidateTag.cs">
+      <BoundTo>4200b169-0de5-46e2-ae25-24f1cbd142b6</BoundTo>
+      <DependentUpon>TC103_ValidateTag.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>4e84d7c2-d0f8-4bbd-bb09-4996852fc388</id>
+    </Compile>
+    <Compile Include="TestCases\WordTC\TC103_ValidateTag.UserCode.cs">
+      <BoundTo>4200b169-0de5-46e2-ae25-24f1cbd142b6</BoundTo>
+      <DependentUpon>TC103_ValidateTag.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>bd6dd14a-2310-4bfc-b0b3-75d2385f6245</id>
+    </Compile>
     <Compile Include="Word\Scripts\ClenupFiles.cs">
       <id>79e19d21-959d-42f4-8c60-035fe3095e2d</id>
     </Compile>
@@ -274,6 +310,9 @@
   <ItemGroup>
     <None Include="app.config">
       <id>b42c7600-b233-49c6-aa17-ef0f5a193f40</id>
+    </None>
+    <None Include="Files\TC003.docx">
+      <id>77104bb3-dcb2-436e-9eaa-bc2e82ad4705</id>
     </None>
     <None Include="Files\Word.docx">
       <id>2a2f6323-68c9-4ada-9c52-5a8f83049c84</id>
@@ -324,6 +363,21 @@
       <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
       <id>a7a42f96-feec-4c0e-a8d5-a83a94c9b081</id>
       <recordtableid>3ceefa23-2e06-40fb-8760-e588edeb79a7</recordtableid>
+    </None>
+    <None Include="TestCases\WordTC\TC101_ValidateIconInTheRibbon.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>87456cca-fda3-47f8-a214-0b0bd75914d8</id>
+      <recordtableid>498f7d83-47fe-453c-9202-68d22ff0548c</recordtableid>
+    </None>
+    <None Include="TestCases\WordTC\TC102_ValidateDocumentContent.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>37f052fc-c22e-4859-8ec9-97294c1a25a7</id>
+      <recordtableid>cb33fa61-fb00-4eb9-8c6a-f2b054fcbd09</recordtableid>
+    </None>
+    <None Include="TestCases\WordTC\TC103_ValidateTag.rxrec">
+      <BoundTo>b78f2047-823f-4ea4-b57a-a44dac6ae05d</BoundTo>
+      <id>4200b169-0de5-46e2-ae25-24f1cbd142b6</id>
+      <recordtableid>fc1b9d8b-2a51-4df8-98b7-910a01d7a138</recordtableid>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -127,6 +127,12 @@
 			type="UserCode">
 			</testmodule>
 			<testmodule
+			id="57b8e712-be3a-4a04-bdfb-292df631d4c0"
+			name="TC103_ValidateTag"
+			ref="fc1b9d8b-2a51-4df8-98b7-910a01d7a138"
+			type="Recording">
+			</testmodule>
+			<testmodule
 			id="5e64a044-8a0c-44d4-b37d-d64900defde2"
 			name="TC001_ValidateEmailReceived"
 			ref="f8fb7afb-4e98-4bfc-a793-3931c189798b"
@@ -138,6 +144,10 @@
 			ref="923ca9c6-ee91-4e8e-9dc9-58bfd3389521"
 			type="Recording">
 			</testmodule>
+			<smartfoldernode
+			id="6f89adce-0016-480b-9c51-d49e1df1a7f4"
+			name="ValidateInsertIcon_101">
+			</smartfoldernode>
 			<testmodule
 			id="71bdd673-b8d5-4986-bb42-89df5396e979"
 			name="ClenupFiles"
@@ -168,7 +178,7 @@
 			</testmodule>
 			<smartfoldernode
 			id="7f9b41a7-a2a3-4e41-bd71-b13ef7a78fed"
-			name="SaveAsNewDoc">
+			name="SaveAsNewDoc_100">
 			</smartfoldernode>
 			<setup
 			id="821b0b09-522f-47b9-bd40-a8d537ed6fda"
@@ -210,6 +220,12 @@
 			ref="3ceefa23-2e06-40fb-8760-e588edeb79a7"
 			type="Recording">
 			</testmodule>
+			<testmodule
+			id="9e75fc6d-69a8-4361-a24f-a79982e4f20c"
+			name="TC102_ValidateDocumentContent"
+			ref="cb33fa61-fb00-4eb9-8c6a-f2b054fcbd09"
+			type="Recording">
+			</testmodule>
 			<testcase
 			id="9fd92b64-9d20-4179-9e4a-1c3aaee95d9b"
 			name="Ranorex_POC"
@@ -225,6 +241,10 @@
 			ref="047f6197-7dbb-4d6c-876c-d1e3edcaf2d5"
 			type="UserCode">
 			</testmodule>
+			<smartfoldernode
+			id="b3d934d8-c468-4ece-9901-751a764191dd"
+			name="ValidateTagContent_103">
+			</smartfoldernode>
 			<smartfoldernode
 			id="baa3c35a-b703-413a-b218-52fbaf8bfe0b"
 			name="Word">
@@ -289,6 +309,16 @@
 			id="f81b5102-1a96-4f94-96c7-f96139c86fb2"
 			name="TestCases">
 			</testcase>
+			<testmodule
+			id="fc36dca2-ded0-492a-9a16-5893c842f8a0"
+			name="TC101_ValidateIconInTheRibbon"
+			ref="498f7d83-47fe-453c-9202-68d22ff0548c"
+			type="Recording">
+			</testmodule>
+			<smartfoldernode
+			id="fc37368a-1100-499d-aecd-8727f6f4bb05"
+			name="ValidateDocContent_102">
+			</smartfoldernode>
 			<testmodule
 			id="fd50c4dd-9332-4b93-92dc-52133b03fa6e"
 			name="TC003_ValidateEmailRecipient"
@@ -490,10 +520,34 @@
 							name="WordTestCases">
 								<smartfoldernode
 								id="7f9b41a7-a2a3-4e41-bd71-b13ef7a78fed"
-								name="SaveAsNewDoc">
+								name="SaveAsNewDoc_100">
 									<testmodule
 									id="999005f5-8587-414e-a422-203a4e8cdcc1"
 									name="TC100_SaveAsNewDoc">
+									</testmodule>
+								</smartfoldernode>
+								<smartfoldernode
+								id="6f89adce-0016-480b-9c51-d49e1df1a7f4"
+								name="ValidateInsertIcon_101">
+									<testmodule
+									id="fc36dca2-ded0-492a-9a16-5893c842f8a0"
+									name="TC101_ValidateIconInTheRibbon">
+									</testmodule>
+								</smartfoldernode>
+								<smartfoldernode
+								id="fc37368a-1100-499d-aecd-8727f6f4bb05"
+								name="ValidateDocContent_102">
+									<testmodule
+									id="9e75fc6d-69a8-4361-a24f-a79982e4f20c"
+									name="TC102_ValidateDocumentContent">
+									</testmodule>
+								</smartfoldernode>
+								<smartfoldernode
+								id="b3d934d8-c468-4ece-9901-751a764191dd"
+								name="ValidateTagContent_103">
+									<testmodule
+									id="57b8e712-be3a-4a04-bdfb-292df631d4c0"
+									name="TC103_ValidateTag">
 									</testmodule>
 								</smartfoldernode>
 							</smartfoldernode>
@@ -540,6 +594,9 @@
 			id="3ff50fd3-ec13-4f1c-8fd1-c7458d5d52f0">
 			</testcontainer>
 			<testcontainer
+			id="6f89adce-0016-480b-9c51-d49e1df1a7f4">
+			</testcontainer>
+			<testcontainer
 			id="7f9b41a7-a2a3-4e41-bd71-b13ef7a78fed">
 			</testcontainer>
 			<testcontainer
@@ -547,6 +604,9 @@
 			</testcontainer>
 			<testcontainer
 			id="a5d54eaf-54ca-470b-b5ee-6a76c105e044">
+			</testcontainer>
+			<testcontainer
+			id="b3d934d8-c468-4ece-9901-751a764191dd">
 			</testcontainer>
 			<testcontainer
 			id="baa3c35a-b703-413a-b218-52fbaf8bfe0b">
@@ -565,6 +625,9 @@
 			</testcontainer>
 			<testcontainer
 			id="f81b5102-1a96-4f94-96c7-f96139c86fb2">
+			</testcontainer>
+			<testcontainer
+			id="fc37368a-1100-499d-aecd-8727f6f4bb05">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

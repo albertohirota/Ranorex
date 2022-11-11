@@ -22,7 +22,7 @@ using Ranorex.Core.Testing;
 
 namespace Ranorex_POC.TestCases.WordTC
 {
-    public partial class TC100_SaveAsNewDoc
+    public partial class TC103_ValidateTag
     {
         /// <summary>
         /// This method gets called right after the recording has been started.
@@ -33,31 +33,32 @@ namespace Ranorex_POC.TestCases.WordTC
             // Your recording specific initialization code goes here.
         }
 
-        public void OpenNewDoc()
-        {
-        	Report.Info("Doc should be open now. Checking...");
-        	if(!Word.WordMethods.IsWordOpen())
-        		Word.WordMethods.OpenWord();
-        }
-
-        public void AddBodyInformation()
-        {
-        	Word.WordMethods.AddDocBodyText("Adding information, Test Case 100");
-        }
-
-        public void SaveAs()
-        {
-        	Word.WordMethods.SaveAsDocument("C:\\temp\\TC100.docx");
-        }
-
-        public void ValidateFileExists()
-        {
-        	Word.WordValidation.ValidateFileExists(@"C:\temp\TC100.docx");
-        }
-
         public void CloseDocument()
         {
-        	Word.WordMethods.Click_CloseDocumentAndDoNotSave();
+            Word.WordMethods.Click_CloseDocumentAndDoNotSave();
+        }
+
+        public void ValidateTag()
+        {
+        	Word.WordValidation.ValidateTagExists("Confidential");
+        }
+
+        public void OpenDoc()
+        {
+        	string path = Common.CommonMethods.ReturnStringPath("\\Files\\TC003.docx");
+        	Report.Info(path);
+        	Common.OpeningApps.OpenApplication(path);
+        }
+
+        public void GoToInfoSession()
+        {
+        	Word.WordMethods.Click_FileMenuButton();
+        	Word.WordMethods.Click_InfoLeftMenuButton();
+        }
+
+        public void GoToHome()
+        {
+            Word.WordMethods.Click_BackLeftMenuButton();
         }
 
     }

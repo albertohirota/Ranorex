@@ -47,10 +47,7 @@ namespace Ranorex_POC.Word.Scripts
             Mouse.DefaultMoveTime = 300;
             Keyboard.DefaultKeyPressTime = 100;
             Delay.SpeedFactor = 1.0;
-            Common.OpeningApps.OpenApplication("Winword");
-            Common.CommonMethods.WaitUntilExist(repo.Word.SelfInfo,60);
-            Common.OpeningApps.MaximizeWord();
-            Word.WordMethods.Click_NewDocument();
+            Word.WordMethods.OpenWord();
         }
     }
 }
