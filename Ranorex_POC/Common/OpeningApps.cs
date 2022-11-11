@@ -80,7 +80,7 @@ namespace Ranorex_POC.Common
         		Report.Info("Maximizing Outlook");
         		Report.Log(ReportLevel.Info, "Click", "Mouse Click item 'Word.ButtonMaximize' at Center.", repo.Word.ButtonMaximizeInfo);
         		repo.Word.ButtonMaximize.Click();
-            	Delay.Milliseconds(200);
+            	Delay.Milliseconds(1000);
         	}
         }
 	}

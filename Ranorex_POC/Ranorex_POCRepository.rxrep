@@ -361,14 +361,6 @@ name="Ranorex_POCRepository">
 			searchtimeout="6000ms">
 				/form[@processname='WINWORD']//listitem[@name='Blank document']
 			</item>
-			<item
-			capname="button"
-			id="d3eaebd7-030a-4eb5-8a23-1a0ab142ae59"
-			name="ButtonClose"
-			robustPath="/form[@title='Word']/element"
-			searchtimeout="5000ms">
-				/form[@processname='WINWORD']//container[@name='Ribbon']/button[@name='Close']
-			</item>
 			<folder
 			capname="unknown"
 			id="91628d7c-80c3-40ce-b9c2-5d995a2cfff4"
@@ -391,6 +383,14 @@ name="Ranorex_POCRepository">
 				robustPath="/form[@processname='WINWORD']//*[@caption='Ribbon']/element"
 				searchtimeout="30000ms">
 					/form[@processname='WINWORD']//*[@caption='Ribbon']//button[@automationid='FileTabButton']
+				</item>
+				<item
+				capname="tabpage"
+				id="a7c40aa8-52c9-4c7e-a0a7-db74629c7b75"
+				name="ButtonInsert"
+				robustPath="/form[@processname='WINWORD']//*[@caption='Ribbon']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']//*[@caption='Ribbon']//tabpage[@automationid='TabInsert']
 				</item>
 				<basepath>
 					/form[@processname='WINWORD']//*[@caption='Ribbon']
@@ -419,6 +419,30 @@ name="Ranorex_POCRepository">
 				searchtimeout="30000ms">
 					/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']//*[@name='Save As']
 				</item>
+				<item
+				capname="unknown"
+				id="e3c3518d-10e2-41f3-aa10-95a953ac4e1c"
+				name="MenuInfo"
+				robustPath="/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']//*[@name='Info']
+				</item>
+				<item
+				capname="unknown"
+				id="b351f8bb-0790-497a-9019-557f922c5689"
+				name="MenuHome"
+				robustPath="/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']//*[@name='Home']
+				</item>
+				<item
+				capname="unknown"
+				id="7d2b3161-729d-410f-ab9a-024e485482a1"
+				name="MenuBack"
+				robustPath="/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']//*[@name='Back']
+				</item>
 				<basepath>
 					/form[@processname='WINWORD']///*[@automationid='NavBarMenu' or @name='File']
 				</basepath>
@@ -437,6 +461,14 @@ name="Ranorex_POCRepository">
 				robustPath="/form[@processname='WINWORD']/element"
 				searchtimeout="30000ms">
 					/form[@processname='WINWORD']//button[@name='Browse']
+				</item>
+				<item
+				capname="text"
+				id="3bf26406-be27-48c5-9a40-5ceec67be536"
+				name="Tag"
+				robustPath="/form[@processname='WINWORD']/element"
+				searchtimeout="30000ms">
+					/form[@processname='WINWORD']//container[@name='Properties']/text[@name='Tags' and @iskeyboardfocusable='True']
 				</item>
 				<basepath>
 					/form[@processname='WINWORD']
@@ -486,6 +518,52 @@ name="Ranorex_POCRepository">
 				</item>
 				<basepath>
 					/form[@processname='WINWORD']//
+				</basepath>
+			</folder>
+			<folder
+			capname="container"
+			id="28ccb2b3-1f5c-45eb-9984-2cf2af020970"
+			isrooted="True"
+			name="Ribbon"
+			searchtimeout="10000ms"
+			usecache="False">
+				<item
+				addcaps="menuitem,uiautomation"
+				capname="menuitem"
+				id="a468d318-340e-453a-b013-21dfc6704a79"
+				name="InsertPictureIcon"
+				refimgid="1c762f9c-488e-443d-8b9e-bc7fcc0147df"
+				robustPath=""
+				searchtimeout="30000ms">
+					<image
+					guid="9b15705e-5106-4281-8fff-f5cb50e9d6b7"
+					name="Screenshot1">
+						iVBORw0KGgoAAAANSUhEUgAAAC8AAABFCAIAAABVKijHAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJOSURBVGhD7ZbdShtBFMd9mr5GnsCrXpT0CbzP
+dW2sUDClUASvvMoziLKgXokg2pal9KZQ8AMUpVSjMRiKH/3Dfzw9Wedsluzohjo/DsvZM5Ozv8xM
+Pia640S0sYk2Nnk2zUfAtTYYYnMXlGhjU43N1dFmJ50/+/qxt5/c3vxx1Ups+sfbv7emJS53l9xA
+JTbn3xe1zen27N3tNYeevU3/ZEfb9HaX3UBVpxhCnW8LnfRT72C14lOcQ7SxeQY2X37+evl+dfJd
+svL5wJWKEd5GVBha6Mdh59XcGkYxx5UGCWyTUdFCeycXrz+ss2IJhbTxqjAgdNrtTy1sSMUrFMwm
+R4VRRCiMzVAVxlChADYFVRj5QgFsiqswcoRK2bxpzqKFNC0eXqHKbBAPhcravG3OjGyDyAiVteG5
+ke4jhBZCKyy2a20w3CYgZW2C41ob5Nk8PdHGJtrYRBubcbV5oUjTFBVcJX8aBmz44Ha7XavVWMzh
+MUQ9NpncogIbXcSC4RYkScIENBqNzDTJOYorclSQAFn1er3OCraCFeCxabVamJoposIHCzJk5UjQ
+ikVIsIhnow+vHNJ4TrE+NLhFF4DEle7hUE4uiV5LgDfGhuIq+HdKYJEvdqV79HxvLglsvB8L2GAO
+Rt19QRskaJd5K7oRRrn9uMpLdEPk+nwI6KnbFrVhTijBE8rtpwRvcX1oozeL58bdDC75P5txINrY
+RBubaGMTbWz+Ixt838t/D3zf69+/0Si7NhTiT48rlSDATkEoiAqIp9gm2thEG4tu9y+CYpuXwjsr
+3gAAAABJRU5ErkJggg==
+					</image>
+					/form[@processname='WINWORD']//container[@name='Ribbon']//menuitem[@automationid='FlyoutAnchorInsertPictures']
+				</item>
+				<item
+				capname="button"
+				id="d3eaebd7-030a-4eb5-8a23-1a0ab142ae59"
+				name="ButtonClose"
+				robustPath="/form[@title='Word']/element"
+				searchtimeout="5000ms">
+					/form[@processname='WINWORD']//container[@name='Ribbon']/button[@name='Close']
+				</item>
+				<basepath>
+					/form[@processname='WINWORD']//container[@name='Ribbon']
 				</basepath>
 			</folder>
 			<basepath>

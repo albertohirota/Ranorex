@@ -22,7 +22,7 @@ using Ranorex.Core.Testing;
 
 namespace Ranorex_POC.TestCases.WordTC
 {
-    public partial class TC100_SaveAsNewDoc
+    public partial class TC102_ValidateDocumentContent
     {
         /// <summary>
         /// This method gets called right after the recording has been started.
@@ -33,31 +33,21 @@ namespace Ranorex_POC.TestCases.WordTC
             // Your recording specific initialization code goes here.
         }
 
-        public void OpenNewDoc()
+        public void OpenDoc()
         {
-        	Report.Info("Doc should be open now. Checking...");
-        	if(!Word.WordMethods.IsWordOpen())
-        		Word.WordMethods.OpenWord();
+        	string path = Common.CommonMethods.ReturnStringPath("\\Files\\Word.docx");
+        	Report.Info(path);
+        	Common.OpeningApps.OpenApplication(path);
         }
 
-        public void AddBodyInformation()
+        public void ValidateDocContent()
         {
-        	Word.WordMethods.AddDocBodyText("Adding information, Test Case 100");
-        }
-
-        public void SaveAs()
-        {
-        	Word.WordMethods.SaveAsDocument("C:\\temp\\TC100.docx");
-        }
-
-        public void ValidateFileExists()
-        {
-        	Word.WordValidation.ValidateFileExists(@"C:\temp\TC100.docx");
+        	Word.WordValidation.ValidateDocumentBodyTextExists("Validate document body content");
         }
 
         public void CloseDocument()
         {
-        	Word.WordMethods.Click_CloseDocumentAndDoNotSave();
+            Word.WordMethods.Click_CloseDocumentAndDoNotSave();
         }
 
     }
